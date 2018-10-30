@@ -111,7 +111,8 @@ class Percolation {
      * @return     True if percolates, False otherwise.
      */
     boolean percolates() {
-        return !(cc.connected(0, (size * size) + 1));
+    	cc = new CC(cd);
+        return cc.connected(0, (size * size) + 1);
     }
 }
 /**
