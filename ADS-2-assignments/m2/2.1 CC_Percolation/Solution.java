@@ -20,17 +20,20 @@ class Percolation {
      * object for weighted addEdge class.
      */
     private Graph cd;
-    private CC cc; 
-/**
- * Constructs the object.
- *
- * @param      n  The size
- */
+    /**
+     * cc object.
+     */
+    private CC cc;
+    /**
+     * Constructs the object.
+     *
+     * @param      n     { parameter_description }
+     */
     Percolation(final int n) {
         grid = new int[n][n];
         cnt = 0;
         cd = new Graph((n * n) + 2);
-    	cc = new CC(cd);
+        cc = new CC(cd);
         this.size = n;
     }
     /**
@@ -38,6 +41,7 @@ class Percolation {
      *
      * @param      row   The value of row
      * @param      col   The value of column
+     * Time complexity : O(1)
      */
     void open(final int row, final int col) {
         grid[row][col] = 1;
@@ -69,6 +73,7 @@ class Percolation {
      *
      * @param      i     row index is given.
      * @param      j     column index is given
+     * Time complexity : O(1)
      *
      * @return     return type is int
      */
@@ -80,7 +85,7 @@ class Percolation {
      *
      * @param      row   The row
      * @param      col   The col
-     *
+     * Time complexity : O(1)
      * @return     True if open, False otherwise.
      */
     boolean isOpen(final int row, final int col) {
@@ -91,7 +96,7 @@ class Percolation {
      *
      * @param      row   The row
      * @param      col   The col
-     *
+     * Time complexity : O(1)
      * @return     True if full, False otherwise.
      */
     boolean isFull(final int row, final int col) {
@@ -99,7 +104,7 @@ class Percolation {
     }
     /**
      * to get the number of open sites.
-     *
+     * Time complexity : O(1)
      * @return     integer is returned.
      */
     int numberofopensites() {
@@ -107,11 +112,11 @@ class Percolation {
     }
     /**
      * function to check if the grid percolates or not.
-     *
+     * Time complexity : O(1)
      * @return     True if percolates, False otherwise.
      */
     boolean percolates() {
-    	cc = new CC(cd);
+        cc = new CC(cd);
         return cc.connected(0, (size * size) + 1);
     }
 }
@@ -127,6 +132,7 @@ class Solution {
     }
     /**
      * function of main.
+     * Time complexity : O(N)
      *
      * @param      args  The arguments
      */
@@ -138,5 +144,5 @@ class Solution {
         wc.open(s.nextInt() - 1, s.nextInt() - 1);
         }
         System.out.println(wc.percolates());
-}
+    }
 }
