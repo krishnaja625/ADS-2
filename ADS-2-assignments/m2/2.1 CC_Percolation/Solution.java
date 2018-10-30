@@ -132,20 +132,6 @@ class Solution {
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-/*        int vertices = Integer.parseInt(scan.nextLine());
-        Graph g = new Graph(vertices);
-        
-        while(scan.hasNext()) {
-        	String[] tokens = scan.nextLine().split(" ");
-        	if(g.e() == 0) {
-        		g.addEdge(0, tokens[0]);
-        	}
-            g.addEdge(Integer.parseInt(tokens[0]),
-            	Integer.parseInt(tokens[1]));
-            if(g.e() == vertices) {
-        		g.addEdge(0, tokens[0]);
-        	}
-        }*/
         int vertices = s.nextInt();
         Percolation wc = new Percolation(vertices);
         while (s.hasNext()) {
