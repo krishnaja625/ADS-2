@@ -2,31 +2,27 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public final class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {
-        // Unused Constructor.
+    protected Solution() {
+
     }
     /**
-     * {Client Program}.
-     *
+     * main method.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int vertices = scan.nextInt();
-        int edges = scan.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int vertices = sc.nextInt();
         Graph g = new Graph(vertices);
-        while (edges > 0) {
-            String[] tokens = scan.nextLine().split(" ");
-            g.addEdge(Integer.parseInt(tokens[0]),
-            	Integer.parseInt(tokens[1]));
-            edges--;
+        int edges = sc.nextInt();
+        while (sc.hasNext()) {
+            g.addEdge(sc.nextInt(), sc.nextInt());
         }
-        Bipartite bp = new Bipartite(g);
-        if (bp.isBipartite()) {
+        Bipartite b = new Bipartite(g);
+        if (b.isBipartite()) {
             System.out.println("Graph is bipartite");
         } else {
             System.out.println("Graph is not a bipartite");

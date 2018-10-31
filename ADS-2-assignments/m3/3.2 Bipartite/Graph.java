@@ -3,68 +3,93 @@
  */
 public class Graph {
     /**
-     * {Vertex}.
+     * integer variable.
      */
-    private int vertices;
+    private final int v;
     /**
-     * {Edges}.
+     * integer variable.
      */
-    private int edges;
+    private int e;
     /**
-     * {Declaring a bag array of type integer}.
+     * array of bag type.
      */
     private Bag<Integer>[] adj;
-
     /**
-     * Create an empty graph with V vertices.
-     * @param     v     {Vertex}
+     * array of bag type.
      */
-    public Graph(final int v) {
-        if (v < 0) {
-            throw new RuntimeException(
-                "Number of vertices must be nonnegative");
-        }
-        this.vertices = v;
-        this.edges = 0;
-        adj = (Bag<Integer>[]) new Bag[vertices];
-        for (int i = 0; i < vertices; i++) {
+    private Bag<Boolean>[] visited;
+   /**
+     * array of bag type.
+     */
+    private Bag<Integer>[] colour;
+    /**
+     * Constructs the object.
+     *
+     * @param      ve   vertex.
+     */
+    public Graph(final int ve) {
+        this.v = ve;
+        this.e = 0;
+        adj = (Bag<Integer>[]) new Bag[v];
+        for (int i = 0; i < v; i++) {
             adj[i] = new Bag<Integer>();
         }
     }
 
     /**
+     * Constructs the object.
+     *Time Complexity : O(N).
+     * @param      ve  integer variable.
+     * @param      ed   integer variable.
+     */
+    public Graph(final int ve, final int ed) {
+        this(ve);
+        for (int i = 0; i < ed; i++) {
+            int ver = (int) (Math.random() * ve);
+            int w = (int) (Math.random() * ve);
+            addEdge(ver, w);
+        }
+    }
+   /**
      * Return the number of vertices in the graph.
-     * @return      {Integer}
+     * Time Complexity : O(1).
+     * @return v
      */
-    public int vertices() {
-        return vertices;
+    public int v() {
+        return v;
     }
 
-    /**
+   /**
      * Return the number of edges in the graph.
-     * @return      {Integer}
+     * Time Complexity : O(1).
+     * @return e
      */
-    public int edges() {
-        return edges;
+    public int e() {
+        return e;
     }
 
-    /**
-     * Add the edge v-w to graph.
-     * @param      v       {Vertex v}
-     * @param       w      {Vertex w}
-     */
-    public void addEdge(final int v, final int w) {
-        edges++;
-        adj[v].add(w);
-        adj[w].add(v);
+
+     /**
+      * Adds an edge.
+      *Time Complexity : O(1).
+      * @param      ve  integer variable.
+      * @param      w   integer variable.
+      */
+    public void addEdge(final int ve, final int w) {
+        e++;
+        adj[ve].add(w);
+        adj[w].add(ve);
     }
 
+
     /**
-     * Return the list of neighbors of vertex v as in Iterable.
-     * @param      v    {Vertex}
-     * @return     {Iterable}
+     * iterable.
+     *
+     * @param      ve integer variable.
+     *Time Complexity : O(N).
+     * @return  array.
      */
-    public Iterable<Integer> adj(final int v) {
-        return adj[v];
+    public Iterable<Integer> adj(final int ve) {
+        return adj[ve];
     }
 }
