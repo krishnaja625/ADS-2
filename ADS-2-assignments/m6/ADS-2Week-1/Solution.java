@@ -116,13 +116,14 @@ public class Solution {
 		WebSearch ws = new WebSearch(pr, file);
 		// instantiate web search object
 		// and pass the page rank object and the file path to the constructor
-		if(sc.hasNext()){
-			while(sc.hasNext()){
+	
+
+	/*		while(sc.hasNext()){
 			String str1 = sc.nextLine().replace("q=", "");
 			ws.iAmFeelingLucky(str1);
-		}
+		}*/
+
 		
-		}
 		
 		// read the search queries from std in
 		// remove the q= prefix and extract the search word
