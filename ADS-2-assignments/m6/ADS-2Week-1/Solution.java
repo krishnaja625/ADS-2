@@ -4,8 +4,8 @@ class PageRank {
 	Iterable<Integer> adJ;
 	PageRank(Digraph dgraph) {
 		
-        for (int i = 0; i < dgraph.V(); i++) {
-        	pR[i] = 1 / (dgraph.V());
+        for (int i = 0; i < dgraph.v(); i++) {
+        	pR[i] = 1 / (dgraph.v());
         	pR[i] = getPR(i, dgraph);    
         }
 
