@@ -1,6 +1,7 @@
 import java.util.Scanner;
 class PageRank {
 	double[] pR;
+	double[] outdeg;
 	Digraph dgraph; 
 	Iterable<Integer> adJ;
 	PageRank(Digraph dgra) {
@@ -9,6 +10,7 @@ class PageRank {
 		double y = 1.0 / (double) x;
 		// System.out.println(y);
 		pR = new double[x];
+		outdeg = new double[x];
         for (int i = 0; i < x; i++) {
         	pR[i] = y;
         	// System.out.println(pR[i]);
@@ -18,9 +20,10 @@ class PageRank {
 	}
 	double getPR(int vertice) {
         adJ = dgraph.adj(vertice);
-        double prval = pR[vertice];
+        double prval = 0.0;
         if (dgraph.indegree(vertice) == 0){
         	pR[vertice] = 0.0;
+
         } else {
 
 		for(int j = 0; j < 1000; j++) {
