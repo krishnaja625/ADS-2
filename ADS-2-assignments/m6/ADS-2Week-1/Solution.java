@@ -116,9 +116,12 @@ public class Solution {
 		WebSearch ws = new WebSearch(pr, file);
 		// instantiate web search object
 		// and pass the page rank object and the file path to the constructor
-		while(sc.hasNext()){
+		if(sc.hasNext()){
+			while(sc.hasNext()){
 			String str1 = sc.nextLine().replace("q=", "");
 			ws.iAmFeelingLucky(str1);
+		}
+		
 		}
 		
 		// read the search queries from std in
