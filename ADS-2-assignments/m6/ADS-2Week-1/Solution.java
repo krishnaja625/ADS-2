@@ -90,7 +90,7 @@ public class Solution {
 		// and pass the page rank object and the file path to the constructor
 		while(sc.hasNext()){
 			String str1 = sc.nextLine().replace("q=", "");
-			System.out.println("str1");
+			System.out.println(str1);
 		}
 		
 		// read the search queries from std in

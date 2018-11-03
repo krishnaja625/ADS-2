@@ -394,10 +394,10 @@ Your Output:
 10 - 1.8092366257863363E123
 11 - 1.8092366257863363E123
 
-str1
-str1
-str1
-str1
-str1
+network
+zone
+anemones
+tree
+australia
 ----------------------------------------
 
