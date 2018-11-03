@@ -6,7 +6,8 @@ class PageRank {
 	PageRank(Digraph dgra) {
 		dgraph = dgra;
 		int x = dgraph.v();
-        for (int i = 0; i < dgraph.v(); i++) {
+		pR = new double[x];
+        for (int i = 0; i < x; i++) {
         	pR[i] = 1 / x;
         	pR[i] = getPR(i);    
         }
