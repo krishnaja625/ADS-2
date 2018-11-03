@@ -7,7 +7,7 @@ class PageRank {
 		dgraph = dgra;
 		int x = dgraph.v();
 		double y = 1.0 / (double) x;
-		System.out.println(y);
+		// System.out.println(y);
 		pR = new double[x];
         for (int i = 0; i < x; i++) {
         	pR[i] = y;
@@ -18,7 +18,7 @@ class PageRank {
 	}
 	double getPR(int vertice) {
         adJ = dgraph.adj(vertice);
-        double prval = 0;
+        double prval = pR[vertice];
 		for(int j = 0; j < 1000; j++) {
 			for (int i : adJ) {
 				prval += pR[vertice] / dgraph.outdegree(i);
