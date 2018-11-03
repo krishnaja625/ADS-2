@@ -44,7 +44,6 @@ public class Solution {
 		// read the first line of the input to get the number of vertices
 		Scanner sc = new Scanner(System.in);
 		int vertices = Integer.parseInt(sc.nextLine());
-		sc.nextLine();
 		 Digraph dg = new Digraph(vertices);
 		for (int i = 0; i < vertices; i++) {
 			String[] tokens = sc.nextLine().split(" ");
