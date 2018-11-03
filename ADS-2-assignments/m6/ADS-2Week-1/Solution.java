@@ -113,7 +113,7 @@ public class Solution {
 		
 		// File path to the web content
 		String file = "WebContent.txt";
-		WebSearch ws = new WebSearch(pr, file);
+		/*WebSearch ws = new WebSearch(pr, file);*/
 		// instantiate web search object
 		// and pass the page rank object and the file path to the constructor
 	
