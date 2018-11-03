@@ -46,6 +46,7 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 		int vertices = Integer.parseInt(sc.nextLine());
 		 Digraph dg = new Digraph(vertices);
+		 try {
 		for (int i = 0; i < vertices; i++) {
 			String[] tokens = sc.nextLine().split(" ");
 			for (int j = 1; j < tokens.length; j++) {
@@ -54,7 +55,10 @@ public class Solution {
 
 			}
 		}
-		System.out.println(dg);
+		} catch (Exception e) {
+            System.out.println(e);
+        }
+			System.out.println(dg);
 
 		// iterate count of vertices times 
 		// to read the adjacency list from std input
