@@ -22,6 +22,10 @@ Your Output:
 1 - 1.3393857589828342E300
 2 - 1.0282004974218123E175
 3 - 0.0
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -48,6 +52,10 @@ Your Output:
 1 - Infinity
 2 - Infinity
 3 - 1.3393857589828342E300
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -74,6 +82,10 @@ Your Output:
 1 - Infinity
 2 - Infinity
 3 - Infinity
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -116,6 +128,10 @@ Your Output:
 5 - 2.7138549386795045E123
 6 - 2.7138549386795045E123
 7 - 2.7138549386795045E123
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -150,6 +166,10 @@ Your Output:
 3 - Infinity
 4 - 0.0
 5 - 0.0
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -192,6 +212,10 @@ Your Output:
 5 - 0.0
 6 - 0.0
 7 - 0.0
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -218,6 +242,10 @@ Your Output:
 1 - 1.3393857589828342E300
 2 - 1.3393857589828342E300
 3 - 1.3393857589828342E300
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -252,6 +280,10 @@ Your Output:
 3 - Infinity
 4 - 0.0
 5 - 0.0
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -278,6 +310,10 @@ Your Output:
 1 - 1.339385758982834E300
 2 - 1.339385758982834E300
 3 - 1.339385758982834E300
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -312,6 +348,10 @@ Your Output:
 3 - 2.806102745769379E281
 4 - 0.0
 5 - 0.0
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -330,6 +370,10 @@ Your Output:
 
 0 - 2.6787715179656683E300
 1 - 2.6787715179656683E300
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -394,10 +438,8 @@ Your Output:
 10 - 1.8092366257863363E123
 11 - 1.8092366257863363E123
 
-network
-zone
-anemones
-tree
-australia
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at WebSearch.<init>(Solution.java:55)
+	at Solution.main(Solution.java:116)
 ----------------------------------------
 

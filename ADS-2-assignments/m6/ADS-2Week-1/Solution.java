@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
+import java.util.HashMap;
 class PageRank {
 	double[] pR;
 	Digraph dgraph; 
@@ -43,9 +46,34 @@ class PageRank {
 	}
 
 class WebSearch {
+	private HashMap<String, ArrayList<Integer>> h = new
+    HashMap<String, ArrayList<Integer>>();
 	WebSearch(PageRank pr, String f1) {
+		Scanner sc1 = new Scanner(f1);
+            while (sc1.hasNextLine()) {
+                String[] tokens = sc1.nextLine().split(",");
+                String[] words = tokens[1].split(" ");
+                for (int i = 0; i < words.length; i++) {
+                    if (h.containsKey(words[i])) {
+                        ArrayList<Integer> arraylist = h.get(words[i]);
+                        arraylist.add(Integer.parseInt(tokens[0]));
+                    } else {
+                        ArrayList<Integer> arraylist = new ArrayList<Integer>();
+                        arraylist.add(Integer.parseInt(tokens[0]));
+                        h.put(words[i], arraylist);
+                    }
+                }
+            }
 		
 	}
+	int iAmFeelingLucky(String query) {
+		if (!(h.containsKey(query))) {
+			return -1;
+		}
+		ArrayList<Integer> id1 = h.get(query);
+		return 11;
+		/*pr.getMax()*/
+		}
 
 }
 
@@ -90,7 +118,7 @@ public class Solution {
 		// and pass the page rank object and the file path to the constructor
 		while(sc.hasNext()){
 			String str1 = sc.nextLine().replace("q=", "");
-			System.out.println(str1);
+			ws.iAmFeelingLucky(str1);
 		}
 		
 		// read the search queries from std in
