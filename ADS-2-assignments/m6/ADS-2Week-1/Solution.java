@@ -36,17 +36,22 @@ class PageRank {
 		return pR[vertice];
 
 	}
-	void tostring() {
+/*	void tostring() {
         String str = "";
 		for (int i = 0; i < dgraph.v(); i++) {
 			str = "";
 			str = i +" - "+ pR[i];
 			System.out.println(str);
-		}
+		}*/
 
+	public String toString()  {
+		StringBuilder s = new StringBuilder();
+		for(int i = 0; i < dgraph.v(); i++) {
+			s.append(i+" - "+pR[i]+"\n");
+		}
+		return s.toString();
 	}
-	
-}
+	}
 
 class WebSearch {
 
@@ -81,7 +86,8 @@ public class Solution {
 		
 		// Create page rank object and pass the graph object to the constructor
 		PageRank pr = new PageRank(dg);
-		pr.tostring();
+		System.out.println(pr);
+		/*pr.tostring();*/
 		// print the page rank object
 		
 		// This part is only for the final test case
