@@ -45,7 +45,7 @@ class PageRank {
 	}
 	}
 
-class WebSearch {
+/*class WebSearch {
 	private HashMap<String, ArrayList<Integer>> h = new
     HashMap<String, ArrayList<Integer>>();
 	WebSearch(PageRank pr, String f1) {
@@ -72,11 +72,11 @@ class WebSearch {
 		}
 		ArrayList<Integer> id1 = h.get(query);
 		return 11;
-		/*pr.getMax()*/
+		pr.getMax()
 		}
 
 }
-
+*/
 
 public class Solution {
 	public static void main(String[] args) {
