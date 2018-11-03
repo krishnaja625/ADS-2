@@ -22,6 +22,7 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:19:22: Parameter vertice should be final. [FinalParameters]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:22:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:22:36: '1000' is a magic number. [MagicNumber]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:24: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:30:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:34:34: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:34:39: '+' is not preceded with whitespace. [WhitespaceAround]
@@ -42,6 +43,6 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:85: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m6\ADS-2Week-1\Solution.java:90: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 36 errors.
+Checkstyle ends with 37 errors.
 Starting audit...
 Audit done.

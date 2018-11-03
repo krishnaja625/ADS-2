@@ -21,7 +21,7 @@ class PageRank {
         double prval = pR[vertice];
 		for(int j = 0; j < 1000; j++) {
 			for (int i : adJ) {
-				prval += pR[vertice] / dgraph.outdegree(i);
+				prval += (double) (pR[vertice] / dgraph.outdegree(i));
 			}
 			pR[vertice] = prval;
 		}
