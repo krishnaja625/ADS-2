@@ -12,7 +12,6 @@ Expected Output:
 3 - 0.0
 
 Your Output: 
-4
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -32,7 +31,6 @@ Expected Output:
 3 - 0.09090909090909086
 
 Your Output: 
-4
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -52,7 +50,6 @@ Expected Output:
 3 - 0.07692307692307687
 
 Your Output: 
-4
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -80,7 +77,6 @@ Expected Output:
 7 - 0.02941176470588232
 
 Your Output: 
-8
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -104,7 +100,6 @@ Expected Output:
 5 - 0.07936507936507975
 
 Your Output: 
-6
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -132,7 +127,6 @@ Expected Output:
 7 - 0.051470588235294074
 
 Your Output: 
-8
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -152,7 +146,6 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -176,7 +169,6 @@ Expected Output:
 5 - 0.12499999999999999
 
 Your Output: 
-6
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -196,7 +188,6 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -220,7 +211,6 @@ Expected Output:
 5 - 0.060240963855421686
 
 Your Output: 
-6
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -236,7 +226,6 @@ Expected Output:
 1 - 0.5
 
 Your Output: 
-2
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
@@ -277,7 +266,6 @@ Expected Output:
 0
 
 Your Output: 
-12
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.<init>(Solution.java:10)
 	at Solution.main(Solution.java:65)
