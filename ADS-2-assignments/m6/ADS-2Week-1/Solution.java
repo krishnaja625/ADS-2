@@ -54,6 +54,7 @@ public class Solution {
 
 			}
 		}
+		System.out.println(dg);
 
 		// iterate count of vertices times 
 		// to read the adjacency list from std input
