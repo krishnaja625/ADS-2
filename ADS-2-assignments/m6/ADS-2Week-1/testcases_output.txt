@@ -14,7 +14,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -33,7 +33,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -52,7 +52,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -79,7 +79,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -102,7 +102,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -129,7 +129,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -148,7 +148,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -171,7 +171,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -190,7 +190,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -213,7 +213,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -228,7 +228,7 @@ Expected Output:
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:50)
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -266,6 +266,8 @@ Expected Output:
 0
 
 Your Output: 
-
+Exception in thread "main" java.lang.NullPointerException
+	at PageRank.<init>(Solution.java:9)
+	at Solution.main(Solution.java:64)
 ----------------------------------------
 

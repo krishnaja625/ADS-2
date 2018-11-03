@@ -1,16 +1,17 @@
 import java.util.Scanner;
 class PageRank {
 	double[] pR;
+	Digraph dgraph; 
 	Iterable<Integer> adJ;
-	PageRank(Digraph dgraph) {
-		
+	PageRank(Digraph dgra) {
+		dgraph = dgra;
         for (int i = 0; i < dgraph.v(); i++) {
         	pR[i] = 1 / (dgraph.v());
-        	pR[i] = getPR(i, dgraph);    
+        	pR[i] = getPR(i);    
         }
 
 	}
-	double getPR(int vertice, Digraph dgraph) {
+	double getPR(int vertice) {
         adJ = dgraph.adj(vertice);
         double prval = 0;
 		for(int j = 0; j < 1000; j++) {
@@ -20,6 +21,15 @@ class PageRank {
 			pR[vertice] = prval;
 		}
 		return pR[vertice];
+	}
+	void tostring() {
+        String str = "";
+		for (int i = 0; i < dgraph.v(); i++) {
+			str = "";
+			str = i +" - "+ pR[i];
+			System.out.println(str);
+		}
+
 	}
 	
 }
@@ -51,7 +61,8 @@ public class Solution {
 		
 		
 		// Create page rank object and pass the graph object to the constructor
-		
+		PageRank pr = new PageRank(dg);
+		pr.tostring();
 		// print the page rank object
 		
 		// This part is only for the final test case
