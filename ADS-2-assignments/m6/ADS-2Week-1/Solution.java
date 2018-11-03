@@ -9,6 +9,7 @@ class PageRank {
 		pR = new double[x];
         for (int i = 0; i < x; i++) {
         	pR[i] = 1 / x;
+        	System.out.println(pR[i]);
         	pR[i] = getPR(i);    
         }
 
