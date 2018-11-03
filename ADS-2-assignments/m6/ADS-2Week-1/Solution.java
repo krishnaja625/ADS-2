@@ -6,6 +6,7 @@ class PageRank {
 	PageRank(Digraph dgra) {
 		dgraph = dgra;
         for (int i = 0; i < dgraph.v(); i++) {
+        	// int x = dgraph.v();
         	pR[i] = 1 / (dgraph.v());
         	pR[i] = getPR(i);    
         }
@@ -57,7 +58,8 @@ public class Solution {
 		// iterate count of vertices times 
 		// to read the adjacency list from std input
 		// and build the graph
-		
+		int x = dg.v();
+		System.out.println(x);
 		
 		// Create page rank object and pass the graph object to the constructor
 		PageRank pr = new PageRank(dg);
