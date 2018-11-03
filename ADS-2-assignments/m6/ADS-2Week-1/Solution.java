@@ -1,7 +1,6 @@
 import java.util.Scanner;
 class PageRank {
 	double[] pR;
-	double[] outdeg;
 	Digraph dgraph; 
 	Iterable<Integer> adJ;
 	PageRank(Digraph dgra) {
@@ -10,7 +9,6 @@ class PageRank {
 		double y = 1.0 / (double) x;
 		// System.out.println(y);
 		pR = new double[x];
-		outdeg = new double[x];
         for (int i = 0; i < x; i++) {
         	pR[i] = y;
         	// System.out.println(pR[i]);
@@ -25,25 +23,16 @@ class PageRank {
         	pR[vertice] = 0.0;
 
         } else {
-
 		for(int j = 0; j < 1000; j++) {
 			for (int i : adJ) {
 				prval += (double) (pR[vertice] / dgraph.outdegree(i));
 			}
 			pR[vertice] = prval;
 		}
-	}
+		}
 		return pR[vertice];
 
 	}
-/*	void tostring() {
-        String str = "";
-		for (int i = 0; i < dgraph.v(); i++) {
-			str = "";
-			str = i +" - "+ pR[i];
-			System.out.println(str);
-		}*/
-
 	public String toString()  {
 		StringBuilder s = new StringBuilder();
 		for(int i = 0; i < dgraph.v(); i++) {
@@ -54,6 +43,9 @@ class PageRank {
 	}
 
 class WebSearch {
+	WebSearch(PageRank pr, String f1) {
+		
+	}
 
 }
 
@@ -87,16 +79,19 @@ public class Solution {
 		// Create page rank object and pass the graph object to the constructor
 		PageRank pr = new PageRank(dg);
 		System.out.println(pr);
-		/*pr.tostring();*/
 		// print the page rank object
 		
 		// This part is only for the final test case
 		
 		// File path to the web content
 		String file = "WebContent.txt";
-		
+		WebSearch ws = new WebSearch(pr, file);
 		// instantiate web search object
 		// and pass the page rank object and the file path to the constructor
+		while(sc.hasNext()){
+			String str1 = sc.nextLine().replace("q=", "");
+			System.out.println("str1");
+		}
 		
 		// read the search queries from std in
 		// remove the q= prefix and extract the search word
