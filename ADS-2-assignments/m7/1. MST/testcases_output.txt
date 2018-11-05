@@ -1,0 +1,108 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+614708.00000
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
+########## Testcase 1: Failed ##########
+Expected Output: 
+1.81000
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
+########## Testcase 2: Failed ##########
+Expected Output: 
+10.46351
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
+########## Testcase 3: Failed ##########
+Expected Output: 
+37.00000
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
+########## Testcase 4: Failed ##########
+Expected Output: 
+19.00000
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
+########## Testcase 5: Failed ##########
+Expected Output: 
+2.00000
+
+Your Output: 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: EdgeWeightedGraph has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 54.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(Unknown Source)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at Solution.main(Solution.java:20)
+----------------------------------------
+
