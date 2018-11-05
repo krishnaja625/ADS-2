@@ -4,15 +4,19 @@ import java.io.File;
 import java.util.HashMap;
 class PageRank {
 	double[] pR;
-	Digraph dgraph; 
+	Digraph dgraph;
+	Digraph revgraph;
+	int vertic;
 	Iterable<Integer> adJ;
 	PageRank(Digraph dgra) {
 		dgraph = dgra;
-		int x = dgraph.v();
+		revgraph = dgraph.reverse();
+		vertic = dgraph.v();
+		int x = dgra.v();
 		double y = 1.0 / (double) x;
 		// System.out.println(y);
-		pR = new double[x];
-        for (int i = 0; i < x; i++) {
+		pR = new double[vertic];
+        for (int i = 0; i < vertic; i++) {
         	pR[i] = y;
         	// System.out.println(pR[i]);
         	pR[i] = getPR(i);    
@@ -20,14 +24,24 @@ class PageRank {
 
 	}
 	double getPR(int vertice) {
+		   for (int i = 0; i < vertic; i++) {
+            if (dgraph.outdegree(i) == 0) {
+                for (int j = 0; j < vertic; j++) {
+                    if (i != j) {
+                        dgraph.addEdge(i, j);
+                    }
+                }
+            }
+        }  
         adJ = dgraph.adj(vertice);
-        double prval = 0.0;
         if (dgraph.indegree(vertice) == 0){
+
         	pR[vertice] = 0.0;
 
         } else {
 		for(int j = 0; j < 1000; j++) {
-			for (int i : adJ) {
+        double prval = 0.0;
+		for (int i : dgraph.reverse().adj(vertice)) {
 				prval += (double) (pR[vertice] / dgraph.outdegree(i));
 			}
 			pR[vertice] = prval;
@@ -123,7 +137,7 @@ public class Solution {
 			ws.iAmFeelingLucky(str1);
 		}*/
 
-		
+
 		
 		// read the search queries from std in
 		// remove the q= prefix and extract the search word
