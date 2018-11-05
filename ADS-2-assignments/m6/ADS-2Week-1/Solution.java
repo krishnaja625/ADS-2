@@ -31,20 +31,20 @@ class PageRank {
                 }
             }
         }  
-        adJ = dgraph.adj(vertice);
+/*        adJ = dgraph.adj(vertice);
         if (dgraph.indegree(vertice) == 0){
 
         	pR[vertice] = 0.0;
 
         } else {
-		for(int j = 0; j < 1000; j++) {
+*/		for(int j = 0; j < 1000; j++) {
         double prval = 0.0;
 		for (int i : revgraph.adj(vertice)) {
 				prval += (double) (pR[vertice] / dgraph.outdegree(i));
 			}
 			pR[vertice] = prval;
 		}
-		}
+		// }
 		return pR[vertice];
 
 	}
