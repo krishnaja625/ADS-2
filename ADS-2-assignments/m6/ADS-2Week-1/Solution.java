@@ -17,13 +17,16 @@ class PageRank {
 		pR = new double[vertic];
         for (int i = 0; i < vertic; i++) {
         	pR[i] = y;
-        	getPR(i);
-        	   
+       	   
         }
+        calcPR();
          
 
 	}
 	double getPR(int vertice) {
+			return pR[vertice];
+		}
+		void calcPR() {
 		   for (int i = 0; i < vertic; i++) {
             if (dgraph.outdegree(i) == 0) {
                 for (int j = 0; j < vertic; j++) {
@@ -33,15 +36,14 @@ class PageRank {
                 }
             }
         }  
-        adJ = dgraph.adj(vertice);
-        if (dgraph.indegree(vertice) == 0){
-
-        	pR[vertice] = 0.0;
-
-        } else {
 		for(int j = 0; j < 1000; j++) {
 			double[] tPR = new double[vertic];
             for (int i = 0; i < vertic; i++) {
+            	if (dgraph.indegree(i) == 0){
+
+        	pR[i] = 0.0;
+
+        } else {
         double prval = 0.0;
 		for (int k : revgraph.adj(i)) {
 				prval += (double) (pR[k] / dgraph.outdegree(k));
@@ -51,7 +53,6 @@ class PageRank {
 		pR = tPR;
 		}
 	}
-	return pR[vertice];
 }
 	public String toString()  {
 		StringBuilder s = new StringBuilder();
