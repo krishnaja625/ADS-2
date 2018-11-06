@@ -272,10 +272,11 @@ implements Iterable<Integer> {
     /**
      * sink method.
      *
-     * @param      k     integer.
+     * @param      r     integer.
      * Time complexity is O(log N).
      */
-    private void sink(int k) {
+    private void sink(int r) {
+        int k = r;
         while (2 * k <= n) {
             int j = 2 * k;
             if (j < n && greater(j, j + 1)) {
