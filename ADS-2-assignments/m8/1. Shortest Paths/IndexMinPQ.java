@@ -275,7 +275,7 @@ implements Iterable<Integer> {
      * @param      r     integer.
      * Time complexity is O(log N).
      */
-    private void sink(int r) {
+    private void sink(final int r) {
         int k = r;
         while (2 * k <= n) {
             int j = 2 * k;
