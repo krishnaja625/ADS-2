@@ -290,7 +290,6 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:4: Missing a Javadoc comment. [JavadocType]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:5:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:6: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:9:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:9:38: Parameter fileName should be final. [FinalParameters]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:11: Line is longer than 80 characters (found 105). [LineLength]
@@ -305,9 +304,10 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:32:36: Expression can be simplified. [SimplifyBooleanExpression]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:46:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:46:29: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:79: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:87: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:105: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:50:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:82: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:90: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m10\Seam Carving\Solution.java:108: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
 Checkstyle ends with 22 errors.
 Starting audit...
