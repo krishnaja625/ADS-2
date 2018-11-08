@@ -34,14 +34,14 @@ public class SeamCarver {
 		deltaX = Math.pow(xTopRed - xbottomRed , 2) + Math.pow(xTopGreen - xbottomGreen, 2)
 		+ Math.pow(xTopBlue - xbottomBlue, 2);
 		double deltaY = 0;
-		double xrightRed = pictur.get(x, y - 1).getRed();
-		double xrightGreen = pictur.get(x, y- 1).getGreen();
-		double xrightBlue = pictur.get(x, y - 1).getBlue();
-		double xleftRed = pictur.get(x, y + 1).getRed();
-		double xleftGreen = pictur.get(x, y + 1).getGreen();
-		double xleftBlue = pictur.get(x, y + 1).getBlue();
-		deltaY = Math.pow(xrightRed - xleftRed , 2) + Math.pow(xrightGreen - xleftGreen, 2)
-		+ Math.pow(xrightBlue - xleftBlue, 2);
+		double yrightRed = pictur.get(x, y - 1).getRed();
+		double yrightGreen = pictur.get(x, y- 1).getGreen();
+		double yrightBlue = pictur.get(x, y - 1).getBlue();
+		double yleftRed = pictur.get(x, y + 1).getRed();
+		double yleftGreen = pictur.get(x, y + 1).getGreen();
+		double yleftBlue = pictur.get(x, y + 1).getBlue();
+		deltaY = Math.pow(yrightRed - yleftRed , 2) + Math.pow(yrightGreen - yleftGreen, 2)
+		+ Math.pow(yrightBlue - yleftBlue, 2);
 		double energySum = deltaX + deltaY;
 		double energy = Math.sqrt(energySum);
 		return energy;
