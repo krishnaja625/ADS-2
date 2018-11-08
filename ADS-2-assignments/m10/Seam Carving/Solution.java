@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Solution {
+	protected Solution() {
+		
+	}
 
     public static void printEnergies(String fileName) {
         Picture picture = new Picture(fileName);
