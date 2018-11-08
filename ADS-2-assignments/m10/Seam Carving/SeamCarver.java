@@ -40,7 +40,11 @@ public class SeamCarver {
 		double xleftRed = pictur.get(x, y + 1).getRed();
 		double xleftGreen = pictur.get(x, y + 1).getGreen();
 		double xleftBlue = pictur.get(x, y + 1).getBlue();
-		return pictur.get(x, y).getRGB();
+		deltaY = Math.pow(xrightRed - xleftRed , 2) + Math.pow(xrightGreen - xleftGreen, 2)
+		+ Math.pow(xrightBlue - xleftBlue, 2);
+		double energySum = deltaX + deltaY;
+		double energy = Math.sqrt(energySum);
+		return energy;
 	}
 
 	// sequence of indices for horizontal seam
