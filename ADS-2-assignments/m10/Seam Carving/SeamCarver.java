@@ -21,9 +21,25 @@ public class SeamCarver {
 
 	// energy of pixel at column x and row y
 	public double energy(int x, int y) {
-		if (x == 0 || y == 0 || x == pictur.width()|| y == pictur.height()) {
+		if (x == 0 || y == 0 || x == pictur.width() - 1|| y == pictur.height() - 1) {
 		return 1000;
 		}
+		double deltaX = 0;
+		double xTopRed = pictur.get(x - 1, y).getRed();
+		double xTopGreen = pictur.get(x - 1, y).getGreen();
+		double xTopBlue = pictur.get(x - 1, y).getBlue();
+		double xbottomRed = pictur.get(x + 1, y).getRed();
+		double xbottomGreen = pictur.get(x + 1, y).getGreen();
+		double xbottomBlue = pictur.get(x + 1, y).getBlue();
+		deltaX = Math.pow(xTopRed - xbottomRed , 2) + Math.pow(xTopGreen - xbottomGreen, 2)
+		+ Math.pow(xTopBlue - xbottomBlue, 2);
+		double deltaY = 0;
+		double xrightRed = pictur.get(x, y - 1).getRed();
+		double xrightGreen = pictur.get(x, y- 1).getGreen();
+		double xrightBlue = pictur.get(x, y - 1).getBlue();
+		double xleftRed = pictur.get(x, y + 1).getRed();
+		double xleftGreen = pictur.get(x, y + 1).getGreen();
+		double xleftBlue = pictur.get(x, y + 1).getBlue();
 		return pictur.get(x, y).getRGB();
 	}
 
