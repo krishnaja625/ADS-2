@@ -45,8 +45,8 @@ public class Solution {
 			String[] str1 = sc.nextLine().split(" ");
 			boolean flag1 = false;
 			boolean flag2 = false;
-			double distance1 = 100000;
-			double distance2 = 100000;
+			double distance1 = Double.POSITIVE_INFINITY;
+			double distance2 = Double.POSITIVE_INFINITY;
 			// First is the source and second is the via is the one where path should pass throuh.
 			DijkstraSP ds1 = new DijkstraSP(eWG, Integer.parseInt(str1[0]));
 			// third is the destination.
@@ -64,6 +64,8 @@ public class Solution {
 				double distance = distance1 + distance2;
 				if (flag1 && flag2) {
 				System.out.format("%.1f", distance);
+				System.out.println(ds2.st());
+
 			} else {
 			System.out.println("No Path Found.");
 			}

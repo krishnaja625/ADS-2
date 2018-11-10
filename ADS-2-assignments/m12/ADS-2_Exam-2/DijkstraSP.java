@@ -8,6 +8,7 @@ class DijkstraSP {
      *distance from one vertex to another.
      */
     private Double[] distTo;
+    StringBuilder s;
     /**
      *edge to is to store the edge connected.
      */
@@ -29,6 +30,7 @@ class DijkstraSP {
      */
     DijkstraSP(final EdgeWeightedGraph g,
                 final int source) {
+        s = new StringBuilder();
         graph = g;
         distTo = new Double[graph.vertices()];
         edgeTo = new Edge[graph.vertices()];
@@ -118,7 +120,11 @@ class DijkstraSP {
         double sum = 0;
         for (Edge each : pathTo(vertex)) {
             sum += each.weight();
+            s.append(each + " ");
         }
         return sum;
+    }
+    public StringBuilder st() {
+        return s;
     }
 }
