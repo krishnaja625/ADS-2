@@ -42,11 +42,31 @@ public class Solution {
 
 		case "ViaPaths":
 			// Handle the case of ViaPaths, where three integers are given.
+			String[] str1 = sc.nextLine().split(" ");
+			boolean flag1 = false;
+			boolean flag2 = false;
+			double distance1 = 100000;
+			double distance2 = 100000;
 			// First is the source and second is the via is the one where path should pass throuh.
+			DijkstraSP ds1 = new DijkstraSP(eWG, Integer.parseInt(str1[0]));
 			// third is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			if (ds1.hasPathTo(Integer.parseInt(str1[1]))) {
+				flag1 = true;
+				distance1 = ds1.distance(Integer.parseInt(str1[1]));
+			}
+			DijkstraSP ds2 = new DijkstraSP(eWG, Integer.parseInt(str1[1]));
+			if (ds2.hasPathTo(Integer.parseInt(str1[2]))) {
+				flag2 = true;
+				distance2 = ds2.distance(Integer.parseInt(str1[2]));
+			}
+				double distance = distance1 + distance2;
+				if (flag1 && flag2) {
+				System.out.format("%.1f", distance);
+			} else {
 			System.out.println("No Path Found.");
+			}
 			break;
 
 		default:

@@ -36,8 +36,14 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:37: Line is longer than 80 characters (found 96). [LineLength]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:37:58: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:44: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:45: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:48:44: '100000' is a magic number. [MagicNumber]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:49:44: '100000' is a magic number. [MagicNumber]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:50: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:51: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:57: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:59: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:62: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 18 errors.
 Starting audit...
 Audit done.
