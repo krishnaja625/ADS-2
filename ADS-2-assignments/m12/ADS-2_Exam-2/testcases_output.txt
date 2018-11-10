@@ -9,13 +9,17 @@ Expected Output:
 5:
 
 Your Output: 
-6 vertices6 edges
-0: Edge@15975490  Edge@6b143ee9  
-1: Edge@1936f0f5  Edge@6615435c  Edge@6b143ee9  
-2: Edge@4909b8da  Edge@3a03464  Edge@1936f0f5  
-3: Edge@3a03464  Edge@15975490  
-4: Edge@4909b8da  Edge@6615435c  
-5:
+Exception in thread "main" java.util.IllegalFormatConversionException: d != Edge
+	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Unknown Source)
+	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Unknown Source)
+	at java.base/java.util.Formatter$FormatSpecifier.print(Unknown Source)
+	at java.base/java.util.Formatter.format(Unknown Source)
+	at java.base/java.util.Formatter.format(Unknown Source)
+	at java.base/java.lang.String.format(Unknown Source)
+	at EdgeWeightedGraph.toString(EdgeWeightedGraph.java:183)
+	at java.base/java.lang.String.valueOf(Unknown Source)
+	at java.base/java.io.PrintStream.println(Unknown Source)
+	at Solution.main(Solution.java:24)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
