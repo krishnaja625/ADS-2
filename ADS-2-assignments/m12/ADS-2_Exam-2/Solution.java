@@ -30,6 +30,11 @@ public class Solution {
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+		/*	if (hasPath()) {
+				System.out.println(path);
+			} else {*/
+			System.out.println("No Path Found.");
+			/*}*/
 			break;
 
 		case "ViaPaths":
