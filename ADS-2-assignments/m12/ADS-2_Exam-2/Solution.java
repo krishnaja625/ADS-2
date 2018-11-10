@@ -69,7 +69,8 @@ public class Solution {
             double distance2 = Double.POSITIVE_INFINITY;
             StringBuilder str2 = new StringBuilder();
             StringBuilder str3 = new StringBuilder();
-            // First is the source and second is the via is the one where path should pass throuh.
+            // First is the source and second
+            //is the via is the one where path should pass throuh.
             DijkstraSP ds1 = new DijkstraSP(eWG,
                 Integer.parseInt(str1[0]));
             // third is the destination.
