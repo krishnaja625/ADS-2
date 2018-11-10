@@ -9,18 +9,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 3 errors.
 Starting audit...
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:122:5: Class 'Edge' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Edge' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:122:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:17: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:18: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:21: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:22: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:23: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:24: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:27: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Edge.java:123:28: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 10 errors.
 Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:179:45: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:179:53: '+' is not preceded with whitespace. [WhitespaceAround]

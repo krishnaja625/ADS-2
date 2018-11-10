@@ -119,8 +119,13 @@ public class Edge implements Comparable<Edge> {
     public int compareTo(final Edge that) {
         return Double.compare(this.weight, that.weight);
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
-        return v+"-"+w+" "+String.format("%.5f", weight);
+        return v + "-" + w + " " + String.format("%.5f", weight);
     }
     }
 
