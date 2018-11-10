@@ -28,9 +28,10 @@ public class Solution {
 		case "DirectedPaths":
 			// Handle the case of DirectedPaths, where two integers are given.
 			// First is the source and second is the destination.
+			String[] str = sc.nextLine().split(" ");
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
-		/*	if (hasPath()) {
+		/*	if (hasPath(str[0], str[1])) {
 				System.out.println(path);
 			} else {*/
 			System.out.println("No Path Found.");
@@ -43,6 +44,7 @@ public class Solution {
 			// third is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			System.out.println("No Path Found.");
 			break;
 
 		default:
