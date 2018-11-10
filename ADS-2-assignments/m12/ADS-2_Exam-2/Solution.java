@@ -80,7 +80,8 @@ public class Solution {
                 distance1 = ds1.distance(Integer.parseInt(str1[1]));
                 str2 = ds1.st();
             }
-            DijkstraSP ds2 = new DijkstraSP(eWG, Integer.parseInt(str1[1]));
+            DijkstraSP ds2 = new DijkstraSP(eWG,
+                Integer.parseInt(str1[1]));
             if (ds2.hasPathTo(Integer.parseInt(str1[2]))) {
                 flag2 = true;
                 distance2 = ds2.distance(Integer.parseInt(str1[2]));
@@ -96,7 +97,6 @@ public class Solution {
             System.out.println("No Path Found.");
             }
             break;
-
         default:
             break;
         }
