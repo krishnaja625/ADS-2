@@ -29,6 +29,8 @@ public class Solution {
 			// Handle the case of DirectedPaths, where two integers are given.
 			// First is the source and second is the destination.
 			String[] str = sc.nextLine().split(" ");
+			DijkstraSP ds = new DijkstraSP(eWG, Integer.parseInt(str[0]));
+
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 		/*	if (hasPath(str[0], str[1])) {
