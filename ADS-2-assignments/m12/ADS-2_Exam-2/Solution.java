@@ -9,7 +9,7 @@ public class Solution {
 		// Self loops are not allowed...
 		// Parallel Edges are allowed...
 		EdgeWeightedGraph eWG = new EdgeWeightedGraph(vertices);
-		for (int i = 0; i < vertices; i++) {
+		for (int i = 0; i < edges; i++) {
 			String[] tokens = sc.nextLine().split(" ");
             Edge e = new Edge(Integer.parseInt(tokens[0]),
                               Integer.parseInt(tokens[1]),
