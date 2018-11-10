@@ -5,7 +5,7 @@ Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\DijkstraSP.java:11:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\DijkstraSP.java:11:19: Variable 's' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\DijkstraSP.java:127:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\DijkstraSP.java:129:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
 Checkstyle ends with 3 errors.
 Starting audit...

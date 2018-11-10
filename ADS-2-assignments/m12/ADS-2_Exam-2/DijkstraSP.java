@@ -120,7 +120,9 @@ class DijkstraSP {
         double sum = 0;
         for (Edge each : pathTo(vertex)) {
             sum += each.weight();
-            s.append(each + " ");
+            int y = each.either();
+            int x = each.other(y);
+            s.append(x + " ");
         }
         return sum;
     }
