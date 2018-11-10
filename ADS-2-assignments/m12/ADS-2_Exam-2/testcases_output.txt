@@ -9,12 +9,12 @@ Expected Output:
 5:
 
 Your Output: 
-6 6
-0: Edge@68837a77  Edge@6be46e8f  
-1: Edge@3567135c  Edge@327471b5  Edge@6be46e8f  
-2: Edge@4157f54e  Edge@90f6bfd  Edge@3567135c  
-3: Edge@90f6bfd  Edge@68837a77  
-4: Edge@4157f54e  Edge@327471b5  
+6 vertices6 edges
+0: Edge@15975490  Edge@6b143ee9  
+1: Edge@1936f0f5  Edge@6615435c  Edge@6b143ee9  
+2: Edge@4909b8da  Edge@3a03464  Edge@1936f0f5  
+3: Edge@3a03464  Edge@15975490  
+4: Edge@4909b8da  Edge@6615435c  
 5:
 ----------------------------------------
 
