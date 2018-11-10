@@ -18,7 +18,7 @@ public class Solution {
 		}
 		// Take the Graph input here...
 
-		String caseToGo = null;
+		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
 		case "Graph":
 		System.out.println(eWG);
