@@ -8,7 +8,10 @@ class DijkstraSP {
      *distance from one vertex to another.
      */
     private Double[] distTo;
-    StringBuilder s;
+    /**
+     * { var_description }
+     */
+    private StringBuilder s;
     /**
      *edge to is to store the edge connected.
      */
@@ -126,6 +129,11 @@ class DijkstraSP {
         }
         return sum;
     }
+    /**
+     * StringBuilder function to print.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public StringBuilder st() {
         return s;
     }
