@@ -33,11 +33,11 @@ public class Solution {
 
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
-		/*	if (hasPath(str[0], str[1])) {
-				System.out.println(path);
-			} else {*/
+			if (ds.hasPathTo(Integer.parseInt(str[1]))) {
+				System.out.format("%.1f",ds.distance(Integer.parseInt(str[1])));
+			} else {
 			System.out.println("No Path Found.");
-			/*}*/
+			}
 			break;
 
 		case "ViaPaths":
