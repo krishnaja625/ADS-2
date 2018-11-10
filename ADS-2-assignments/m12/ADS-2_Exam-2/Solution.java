@@ -1,7 +1,23 @@
+/**
+ * to import scanner class.
+ */
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	protected Solution() {
 
-	public static void main(String[] args) {
+	}
+/**
+ * function for main }.
+ *
+ * @param      args  The arguments
+ */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int vertices = sc.nextInt();
 		int edges = sc.nextInt();

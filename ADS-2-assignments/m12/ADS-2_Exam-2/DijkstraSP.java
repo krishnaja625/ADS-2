@@ -9,7 +9,7 @@ class DijkstraSP {
      */
     private Double[] distTo;
     /**
-     * { var_description }
+     * StringBuilder description.
      */
     private StringBuilder s;
     /**
