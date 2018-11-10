@@ -9,10 +9,8 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:72: Line is longer than 80 characters (found 98). [LineLength]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m12\ADS-2_Exam-2\Solution.java:92:53: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.

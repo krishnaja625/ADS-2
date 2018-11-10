@@ -70,7 +70,8 @@ public class Solution {
             StringBuilder str2 = new StringBuilder();
             StringBuilder str3 = new StringBuilder();
             // First is the source and second is the via is the one where path should pass throuh.
-            DijkstraSP ds1 = new DijkstraSP(eWG, Integer.parseInt(str1[0]));
+            DijkstraSP ds1 = new DijkstraSP(eWG,
+                Integer.parseInt(str1[0]));
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
@@ -89,7 +90,7 @@ public class Solution {
                 if (flag1 && flag2) {
                 System.out.format("%.1f", distance);
                 System.out.println();
-                System.out.println(str2.append(" " +str3));
+                System.out.println(str2.append(" " + str3));
 
             } else {
             System.out.println("No Path Found.");
