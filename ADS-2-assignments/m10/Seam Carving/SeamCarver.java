@@ -1,248 +1,279 @@
-
+import java.awt.Color;
+/**
+ * Class for seam carver.
+ */
 public class SeamCarver {
-	Picture pictur;
-	double[][] energy;
-	// create a seam carver object based on the given picture
-	public SeamCarver(Picture picture) {
-		pictur = picture;
-		energy = new double[pictur.height()][pictur.width()];
-	}
-	// current picture
-	public Picture picture() {
-		return pictur;
-	}
-	// width of current picture
-	public int width() {
-		return pictur.width();
-	}
-
-	// height of current picture
-	public int height() {
-		return pictur.height();
-	}
-
-	// energy of pixel at column x and row y
-	public double energy(int x, int y) {
-		if (x == 0 || y == 0 || x == pictur.width() - 1|| y == pictur.height() - 1) {
-			// energyArr[y][x] = 1000;
-		return 1000;
-		}
-		double deltaX = 0;
-		double xTopRed = pictur.get(x - 1, y).getRed();
-		double xTopGreen = pictur.get(x - 1, y).getGreen();
-		double xTopBlue = pictur.get(x - 1, y).getBlue();
-		double xbottomRed = pictur.get(x + 1, y).getRed();
-		double xbottomGreen = pictur.get(x + 1, y).getGreen();
-		double xbottomBlue = pictur.get(x + 1, y).getBlue();
-		deltaX = Math.pow(xTopRed - xbottomRed , 2) + Math.pow(xTopGreen - xbottomGreen, 2)
-		+ Math.pow(xTopBlue - xbottomBlue, 2);
-		double deltaY = 0;
-		double yrightRed = pictur.get(x, y - 1).getRed();
-		double yrightGreen = pictur.get(x, y- 1).getGreen();
-		double yrightBlue = pictur.get(x, y - 1).getBlue();
-		double yleftRed = pictur.get(x, y + 1).getRed();
-		double yleftGreen = pictur.get(x, y + 1).getGreen();
-		double yleftBlue = pictur.get(x, y + 1).getBlue();
-		deltaY = Math.pow(yrightRed - yleftRed , 2) + Math.pow(yrightGreen - yleftGreen, 2)
-		+ Math.pow(yrightBlue - yleftBlue, 2);
-		double energySum = deltaX + deltaY;
-		double energy = Math.sqrt(energySum);
-		// energyArr[y][x] = energy;
-		return energy;
-	}
-private void dfsMinPath(int x, int y, double[][] sumEnergy,
-   double[][] energy, int[][] steps, boolean horizontal) {
-  if ((horizontal && x == pictur.width() - 1)
-    || (!horizontal && y == pictur.height() - 1)) {
-   sumEnergy[y][x] = energy[y][x];
-   steps[y][x] = -1;
-   return;
-  }
-  double minPath = 1000;
-  int bestMv = 0;
-  for (int mv = -1; mv <= 1; mv++) {
-   if (horizontal) {
-    int py = y + mv;
-    if (py >= pictur.height() || py < 0)
-     continue;
-    if (steps[py][x + 1] == 0)
-     dfsMinPath(x + 1, py, sumEnergy, energy, steps, horizontal);
-    if (sumEnergy[py][x + 1] < minPath) {
-     minPath = sumEnergy[py][x + 1];
-     bestMv = py;
+    /**
+     *the picture object.
+     */
+    private Picture picture;
+    /**
+     *the width of image.
+     */
+    private int width;
+    /**
+     *the height of pixel.
+     */
+    private int height;
+    /**
+     *the constructor to initialize.
+     *
+     * @param      pic   The picture
+     */
+    public SeamCarver(final Picture pic) {
+        this.picture = pic;
+        width = picture.width();
+        height = picture.height();
     }
-   } else {
-    int px = x + mv;
-    if (px >= pictur.width() || px < 0)
-     continue;
-    if (steps[y + 1][px] == 0)
-     dfsMinPath(px, y + 1, sumEnergy, energy, steps, horizontal);
-    if (sumEnergy[y + 1][px] < minPath) {
-     minPath = sumEnergy[y + 1][px];
-     bestMv = px;
+    /**
+     *the method will return the picture.
+     *object.
+     * @return picture object.
+     */
+    public Picture picture() {
+        return picture;
     }
-   }
-  }
-  steps[y][x] = bestMv;
-  sumEnergy[y][x] = energy[y][x] + minPath;
- }
-  public int[] findHorizontalSeam() {
-  // sequence of indices for horizontal seam
-  int[][] steps = new int[pictur.height()][pictur.width()];
-  double[][] sumEnergy = new double[pictur.height()][pictur.width()];
-  this.calSumEnergy();
-  for (int y = 0; y < pictur.height(); y++)
-   this.dfsMinPath(0, y, sumEnergy, energy, steps, true);
-  int[] ht = new int[pictur.width()];
-  double bestEnergy = Double.MAX_VALUE;
-  for (int y = 0; y < this.height(); y++) {
-   if (sumEnergy[y][0] < bestEnergy) {
-    bestEnergy = sumEnergy[y][0];
-    ht[0] = y;
-   }
-  }
-  for (int x = 1; x < this.width(); x++) {
-   ht[x] = steps[ht[x - 1]][x - 1];
-  }
-  return ht;
- }
-  private void calSumEnergy() {
-  for (int j = 0; j < pictur.height(); j++)
-   for (int i = 0; i < pictur.width(); i++) {
-    energy[j][i] = this.energy(i, j);
-   }
- }
+    /**
+     *this method will return the width.
+     *of image.
+     * @return width of pixel
+     */
+    public int width() {
+        return width;
+    }
+    /**
+     *height of current picture.
+     *
+     * @return height of image.
+     */
+    public int height() {
+        return height;
+    }
+    /**
+     *energy of pixel at column x and row y.
+     *
+     * @param      x  x coordinate
+     * @param      y   y coordinate
+     *
+     * @return energy of pixel.
+     */
+    public double energy(final int x, final int y) {
+        //handle exceptions
+        final double num = 1000.0;
+        if (x == 0 || y == 0 || y == (height - 1) || x == (width - 1)) {
+            return num;
+        }
+        double xCoordinate = 0.0;
+        double yCoordinate = 0.0;
+        Color object = picture.get(x, y);
+        Color leftObj = picture.get(x, y - 1);
+        Color rightObj = picture.get(x, y + 1);
+        double xRed = Math.abs((leftObj.getRed() - rightObj.getRed()));
+        double xGreen = Math.abs((leftObj.getGreen() - rightObj.getGreen()));
+        double xBlue = Math.abs((leftObj.getBlue() - rightObj.getBlue()));
+        xCoordinate = Math.pow(xRed, 2) + Math.pow(xBlue, 2)
+                      + Math.pow(xGreen, 2);
+        Color topObj = picture.get(x - 1, y);
+        Color bottomObj = picture.get(x + 1, y);
+        double yRed = Math.abs((topObj.getRed() - bottomObj.getRed()));
+        double yGreen = Math.abs((topObj.getGreen() - bottomObj.getGreen()));
+        double yBlue = Math.abs((topObj.getBlue() - bottomObj.getBlue()));
+        yCoordinate = Math.pow(yRed, 2) + Math.pow(yBlue, 2)
+                      + Math.pow(yGreen, 2);
+        double sum = Math.sqrt((xCoordinate + yCoordinate));
+        return sum;
+    }
+    /**sequence of indices for horizontal seam.
+     *
+     *time complexity is O(w*h)
+     *w is the width and h is the height
+     * @return  sequence of indices of horizontal seam
+     */
+    public int[] findHorizontalSeam() {
+        final int n = 1000;
+        int[][] edgeTo = new int[height][width];
+        double[][] distTo = new double[height][width];
+        reset(distTo);
+        for (int row = 0; row < height; row++) {
+            distTo[row][0] = n;
+        }
+        // this is for relaxation.
+        for (int col = 0; col < width - 1; col++) {
+            for (int row = 0; row < height; row++) {
+                relaxH(row, col, edgeTo, distTo);
+            }
+        }
+        double minDist = Double.MAX_VALUE;
+        int minRow = 0;
+        for (int row = 0; row < height; row++) {
+            if (minDist > distTo[row][width - 1]) {
+                minDist = distTo[row][width - 1];
+                minRow = row;
+            }
+        }
+        int[] indices = new int[width];
+        //to find the horizontal seam.
+        for (int col = width - 1, row = minRow; col >= 0; col--) {
+            indices[col] = row;
+            row -= edgeTo[row][col];
+        }
+        return indices;
+    }
+    /**
+     * relaxation for horizontal.
+     *
+     * @param      row     The row
+     * @param      col     The col
+     * @param      edgeTo  The edge to
+     * @param      distTo  The distance to
+     */
+    private void relaxH(final int row, final int col,
+                        final int[][] edgeTo, final double[][] distTo) {
+        int nextCol = col + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextRow = row + i;
+            if (nextRow < 0 || nextRow >= height) {
+                continue;
+            }
+            if (i == 0) {
+                if (distTo[nextRow][nextCol] >= distTo[row][col]
+                        + energy(nextCol, nextRow)) {
+                    distTo[nextRow][nextCol] = distTo[row][col]
+                                               + energy(nextCol, nextRow);
+                    edgeTo[nextRow][nextCol] = i;
+                }
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col]
+                    + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col]
+                                           + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
+        }
+    }
+    /**
+     *this method is to find the vertical seam.
+     *first of all find the shortest path from top to.
+     *bottom.
+     *time complexity is O(w*h)
+     *w is the width and h is the height
+     * @return sequence of indices for vertical seam.
+     */
+    public int[] findVerticalSeam() {
+        final double thousand = 1000.0;
+        double[][] energy = new double[height][width];
+        int[][] edgeTo = new int[height][width];
+        double[][] distTo = new double[height][width];
+        reset(distTo);
+        int[] indices = new int[height];
+        if (width == 1 || height == 1) {
+            return indices;
+        }
+        for (int i = 0; i < width; i++) {
+            distTo[0][i] = thousand;
+        }
+        // this is for relaxation.
+        for (int i = 0; i < height - 1; i++) {
+            for (int j = 0; j < width; j++) {
+                relaxV(i, j, edgeTo, distTo);
+            }
+        }
+        // calculating from last row
+        // column wise
+        double minDist = Double.MAX_VALUE;
+        int minCol = 0;
+        for (int col = 0; col < width; col++) {
+            if (minDist > distTo[height - 1][col]) {
+                minDist = distTo[height - 1][col];
+                minCol = col;
+            }
+        }
+        //indices values of shortest path.
+        for (int row = height - 1, col = minCol; row >= 0; row--) {
+            indices[row] = col;
+            col -= edgeTo[row][col];
+        }
+        indices[0] = indices[1];
+        return indices;
+    }
+    /**.
+     *time complexity is O(W * H)
+     *W is the width of image
+     *H is the height of image
+     * @param      distTo  The distance to
+     */
+    private void reset(final double[][] distTo) {
+        /**
+         *reset all the values to maxvalue.
+         */
+        for (int i = 0; i < distTo.length; i++) {
+            for (int j = 0; j < distTo[i].length; j++) {
+                distTo[i][j] = Double.MAX_VALUE;
+            }
+        }
+    }
+    /**
+     * relaxation for vertex.
+     *
+     * @param      row     The row
+     * @param      col     The col
+     * @param      edgeTo  The edge to
+     * @param      distTo  The distance to
+     */
+    private void relaxV(final int row, final int col, final int[][] edgeTo,
+                        final double[][] distTo) {
+        int nextRow = row + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextCol = col + i;
+            if (nextCol < 0 || nextCol >= width) {
+                continue;
+            }
+            //spl case for bottom element.
+            if (i == 0) {
+                if (distTo[nextRow][nextCol] >= distTo[row][col]
+                        + energy(nextCol, nextRow)) {
+                    distTo[nextRow][nextCol] = distTo[row][col]
+                                               + energy(nextCol, nextRow);
+                    edgeTo[nextRow][nextCol] = i;
+                }
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col]
+                    + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col]
+                                           + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
+        }
+    }
+    /**
+     * Removes a horizontal seam.
+     * time complexity is O(width * height)
+     *
+     * @param      seam  The seam
+     */
+    public void removeHorizontalSeam(final int[] seam) {
+        //handle exceptions
+        for (int col = 0; col < width; col++) {
+            for (int row = seam[col]; row < height - 1; row++) {
+                this.picture.set(col, row, this.picture.get(col, row + 1));
+            }
+        }
+        height--;
+    }
 
- public int[] findVerticalSeam() {
-  // sequence of indices for vertical seam
-  int[][] steps = new int[pictur.height()][pictur.width()];
-  double[][] sumEnergy = new double[pictur.height()][pictur.width()];
-  this.calSumEnergy();
-  for (int x = 0; x < pictur.width(); x++)
-   this.dfsMinPath(x, 0, sumEnergy, energy, steps, false);
-  int[] ht = new int[pictur.height()];
-  double bestEnergy = Double.MAX_VALUE;
-  for (int x = 0; x < this.width(); x++) {
-   if (sumEnergy[0][x] < bestEnergy) {
-    bestEnergy = sumEnergy[0][x];
-    ht[0] = x;
-   }
-  }
-  for (int y = 1; y < this.height(); y++)
-   ht[y] = steps[y - 1][ht[y - 1]];
-  return ht;
- }
-
- public void removeHorizontalSeam(int[] a) throws IllegalArgumentException {
-  // remove horizontal seam from picture
-  if (a.length != pictur.width())
-   throw new IllegalArgumentException();
-  Picture cPic = new Picture(pictur.width(), pictur.height() - 1);
-  for (int i = 0; i < pictur.width(); i++) {
-   for (int j = 0; j < pictur.height(); j++) {
-    if (j == a[i])
-     continue;
-    int pt = j;
-    if (pt > a[i])
-     pt--;
-    cPic.set(i, pt, this.pictur.get(i, j));
-   }
-  }
-  this.pictur = cPic;
- }
-
- public void removeVerticalSeam(int[] a) throws IllegalArgumentException {
-  // remove vertical seam from picture
-  if (a.length != pictur.height())
-   throw new IllegalArgumentException();
-  Picture cPic = new Picture(pictur.width() - 1, pictur.height());
-  for (int j = 0; j < pictur.height(); j++) {
-   for (int i = 0; i < pictur.width(); i++) {
-    if (i == a[j])
-     continue;
-    int pt = i;
-    if (pt > a[j])
-     pt--;
-    cPic.set(pt, j, pictur.get(i, j));
-   }
-  }
-  this.pictur = cPic;
- }
+    /**
+     * Removes a vertical seam.
+     * time complexity is O(width * height)
+     *
+     * @param      seam  The seam
+     */
+    public void removeVerticalSeam(final int[] seam) {
+        for (int row = 0; row < height; row++) {
+            for (int col = seam[row]; col < width - 1; col++) {
+                this.picture.set(col, row, this.picture.get(col + 1, row));
+            }
+        }
+        width--;
+    }
 }
 
-/*	// sequence of indices for horizontal seam
-	public int[] findHorizontalSeam() {
-		return new int[0];
-	}
-
-	// sequence of indices for vertical seam
-	public int[] findVerticalSeam() {
-		double min = 1000;
-		int[] hght = new int[pictur.height()];
-		this.dfsMinPath(x, 0, sumEnergy, energy, steps, false);
-		for (int row = 0; row < pictur.height(); row++) {
-            for (int col = 0; col < pictur.width(); col++) {
-            	if (row == 0) {
-            	if (min > energyArr[row][col]) {
-            	min = energyArr[row][col];
-            	hght[0] = col;
-            }
-            hght[col] = col;
-            }   
-        }
-        if (row == 0) {
-
-        	continue;
-        }
-    }
-    
-        for (int y = 1; y < this.height(); y++) {
-   			hght[y] = steps[y - 1][ht[y - 1]];
-        }
-  		return hght;
-            }
-              int[][] steps = new int[pic.height()][pic.width()];
-  double[][] sumEnergy = new double[pic.height()][pic.width()];
-  this.calSumEnergy();
-  for (int x = 0; x < this.width(); x++)
-   this.dfsMinPath(x, 0, sumEnergy, energy, steps, false);
-  int[] ht = new int[pic.height()];
-  double bestEnergy = Double.MAX_VALUE;
-  for (int x = 0; x < this.width(); x++) {
-   if (sumEnergy[0][x] < bestEnergy) {
-    bestEnergy = sumEnergy[0][x];
-    ht[0] = x;
-   }
-  }
-  for (int y = 1; y < this.height(); y++)
-   ht[y] = steps[y - 1][ht[y - 1]];
-  return ht;
- }
-	  // sequence of indices for vertical seam
-/*  int[][] steps = new int[pic.height()][pic.width()];
-  double[][] sumEnergy = new double[pic.height()][pic.width()];
-  this.calSumEnergy();
-  for (int x = 0; x < this.width(); x++)
-   this.dfsMinPath(x, 0, sumEnergy, energy, steps, false);
-  int[] ht = new int[pic.height()];
-  double bestEnergy = Double.MAX_VALUE;
-  for (int x = 0; x < this.width(); x++) {
-   if (sumEnergy[0][x] < bestEnergy) {
-    bestEnergy = sumEnergy[0][x];
-    ht[0] = x;
-   }
-  }
-  for (int y = 1; y < this.height(); y++)
-   ht[y] = steps[y - 1][ht[y - 1]];
-  return ht*/
-
-/*	// remove horizontal seam from current picture
-	public void removeHorizontalSeam(int[] seam) {
-
-	}
-
-	// remove vertical seam from current picture
-	public void removeVerticalSeam(int[] seam) {
-
-	}
-}*/
