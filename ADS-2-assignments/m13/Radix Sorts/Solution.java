@@ -23,17 +23,8 @@ public final class Solution {
         for (int i = 0; i < n; i++) {
             tokens[i] = sc.nextLine();
         }
-       lsd.sort(tokens, tokens[0].length());
+        lsd.sort(tokens, tokens[1].length());
         System.out.println(Arrays.toString(tokens));
     }
 }
-
-
-
-
-
-
-
-
-
 
