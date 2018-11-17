@@ -85,22 +85,20 @@ public class Solution {
 		return in.readAllStrings();
 	}
 
-	public static BinarySearchST<String, Integer> loadDictionary(String file) {
+		public static BinarySearchST<String, Integer> loadDictionary(String file) {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
 		// your code goes here
 				// your code goes here
 		String[] strs = toReadFile(file);
 		for (int i = 0; i < strs.length; i++) {
-			strs[i].toLowerCase();
+			String str = strs[i].toLowerCase();
 			// System.out.println(strs[i]);
-			st.put(strs[i], 0);
-		}
-		for (int i = 0; i < strs.length; i++) {
-            int count = st.get(strs[i]);
-            if (st.contains(strs[i])) {
-                st.put(strs[i], count + 1);
+            // int count = st.get(str);
+            if (!(st.contains(str))) {
+                st.put(str, 1);
             } else {
-                st.put(strs[i], 1);
+            	int count = st.get(str);
+                st.put(str, count + 1);
             }
         }
 		return st;
