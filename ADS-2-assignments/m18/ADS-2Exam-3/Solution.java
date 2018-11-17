@@ -90,8 +90,10 @@ public class Solution {
 		// your code goes here
 				// your code goes here
 		String[] strs = file.split(" ");
+
 		for (int i = 0; i < strs.length; i++) {
 			strs[i].toLowerCase();
+			System.out.println(strs[i]);
 			st.put(strs[i], 0);
 		}
 		for (int i = 0; i < strs.length; i++) {
