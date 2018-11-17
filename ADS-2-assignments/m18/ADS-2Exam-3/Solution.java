@@ -93,7 +93,6 @@ public class Solution {
 		for (int i = 0; i < strs.length; i++) {
 			String str = strs[i].toLowerCase();
 			// System.out.println(strs[i]);
-            // int count = st.get(str);
             if (!(st.contains(str))) {
                 st.put(str, 1);
             } else {
@@ -107,8 +106,15 @@ public class Solution {
 }
 
 class T9 {
+	private TST<Integer> tst;
+	private BinarySearchST<String, Integer> bst;
 
 	public T9(BinarySearchST<String, Integer> st) {
+		bst = st;
+		tst = new TST<Integer>();
+			for (String key : bst.keys()) {
+				tst.put(key, bst.get(key));
+			}
 		// your code goes here
 	}
 
