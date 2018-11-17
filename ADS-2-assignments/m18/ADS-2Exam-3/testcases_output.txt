@@ -176,11 +176,11 @@ Your Output:
 87
 42
 is
-within
-words
-rights
-right
-hello
+is
+is
+is
+is
+is
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -233,8 +233,8 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at T9.getSuggestions(Solution.java:145)
-	at T9.t9(Solution.java:163)
+	at T9.getSuggestions(Solution.java:146)
+	at T9.t9(Solution.java:170)
 	at Solution.main(Solution.java:71)
 ----------------------------------------
 
