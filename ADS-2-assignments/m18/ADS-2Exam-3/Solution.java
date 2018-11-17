@@ -128,7 +128,7 @@ class T9 {
             }
         }
 		// your code goes here
-		return null;
+		return al;
 	}
 
 	public Iterable<String> potentialWords(String t9Signature) {
