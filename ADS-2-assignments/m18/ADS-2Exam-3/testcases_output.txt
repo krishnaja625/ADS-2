@@ -169,10 +169,10 @@ right
 words
 
 Your Output: 
-words
-within
-rights
 right
+rights
+within
+words
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
