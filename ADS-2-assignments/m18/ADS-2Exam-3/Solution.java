@@ -140,39 +140,15 @@ class T9 {
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int top = k;
 		String[] str1 = new String[10];
-		String[] str2 = new String[10];
-		int z = 0;
-		String temp;
+		int i = 0;
 		ArrayList<String> als = new ArrayList<String>();
 		for (String str : words) {
-			str1[z++] = str;
+			str1[i++] = str;
 		}
-		for (int i = 0; i < z; i++) 
-        {
-            for (int j = i + 1; j < z; j++) 
-            {
-                if (str1[i].compareTo(str1[j]) < 0)  
-                {
-                    temp = str1[i];
-                    str1[i] = str1[j];
-                    str1[j] = temp;
-                }
-            }
-        }
-        for (int l =0; l < top; l++) {
-        	als.add(str1[l]);
-        }
-		/*int max = 0;
 		for (int j = 0; j < i; j++) {
-			for (int k = 0; k < j; k++)
-			if (bst.get(str1[j]) > max) {
-				max = bst.get(str1[j]);
-				str2[0] = str1[j];
-
-			}
 			System.out.println(bst.get(str1[j]));
-			als.add(str2[0]);*/
-		
+			als.add(str1[j]);
+		}
 
 			// bst.get(str);
 

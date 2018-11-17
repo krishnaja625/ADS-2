@@ -403,21 +403,12 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:140:48: Parameter words should be final. [FinalParameters]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:140:72: Parameter k should be final. [FinalParameters]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:142:44: '10' is a magic number. [MagicNumber]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:143:44: '10' is a magic number. [MagicNumber]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:150: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:151:9: '{' at column 9 should be on the previous line. [LeftCurly]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:152: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:153:13: '{' at column 13 should be on the previous line. [LeftCurly]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:154: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:155:17: '{' at column 17 should be on the previous line. [LeftCurly]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:162:21: '=' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:175: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:179: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:186:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:186:36: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:186:56: Parameter k should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:155: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:162:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:162:36: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:162:56: Parameter k should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 41 errors.
+Checkstyle ends with 32 errors.
 Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\TST.java:319:5: Class 'TST' looks like designed for extension (can be subclassed), but the method 'hasPrefix' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TST' final or making the method 'hasPrefix' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
