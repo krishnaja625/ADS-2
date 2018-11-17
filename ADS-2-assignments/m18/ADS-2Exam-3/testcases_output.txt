@@ -169,18 +169,10 @@ right
 words
 
 Your Output: 
-704
-6
-22
-2
-87
-42
-is
-within
 words
+within
 rights
 right
-hello
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -233,8 +225,8 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at T9.getSuggestions(Solution.java:145)
-	at T9.t9(Solution.java:163)
+	at T9.getSuggestions(Solution.java:147)
+	at T9.t9(Solution.java:187)
 	at Solution.main(Solution.java:71)
 ----------------------------------------
 
