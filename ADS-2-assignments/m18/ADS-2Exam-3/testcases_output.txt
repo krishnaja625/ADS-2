@@ -169,8 +169,18 @@ right
 words
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:58)
+704
+6
+22
+2
+87
+42
+is
+within
+words
+rights
+right
+hello
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -223,6 +233,8 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
+	at T9.getSuggestions(Solution.java:145)
+	at T9.t9(Solution.java:163)
 	at Solution.main(Solution.java:71)
 ----------------------------------------
 
