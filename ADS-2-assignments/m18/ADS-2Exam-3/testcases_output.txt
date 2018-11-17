@@ -169,9 +169,14 @@ right
 words
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
-	at T9.getSuggestions(Solution.java:170)
-	at Solution.main(Solution.java:59)
+words
+hello
+right
+is
+words
+right
+is
+hello
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -225,7 +230,7 @@ keep
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at T9.getSuggestions(Solution.java:148)
-	at T9.t9(Solution.java:205)
+	at T9.t9(Solution.java:196)
 	at Solution.main(Solution.java:72)
 ----------------------------------------
 
