@@ -140,8 +140,8 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int top = k;
-		String[] str1 = new String[10];
-		String[] str2 = new String[10];
+		String[] str1 = new String[6];
+		String[] str2 = new String[top];
 		int z = 0;
 		String temp;
 		ArrayList<String> als = new ArrayList<String>();
