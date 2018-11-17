@@ -11,7 +11,7 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.loadDictionary(Solution.java:97)
+	at Solution.loadDictionary(Solution.java:96)
 	at Solution.main(Solution.java:14)
 ----------------------------------------
 
@@ -53,7 +53,7 @@ going
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.loadDictionary(Solution.java:97)
+	at Solution.loadDictionary(Solution.java:96)
 	at Solution.main(Solution.java:23)
 ----------------------------------------
 
@@ -123,7 +123,7 @@ seeking
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.loadDictionary(Solution.java:97)
+	at Solution.loadDictionary(Solution.java:96)
 	at Solution.main(Solution.java:34)
 ----------------------------------------
 
@@ -136,7 +136,7 @@ words
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.loadDictionary(Solution.java:97)
+	at Solution.loadDictionary(Solution.java:96)
 	at Solution.main(Solution.java:50)
 ----------------------------------------
 
@@ -190,7 +190,7 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.loadDictionary(Solution.java:97)
+	at Solution.loadDictionary(Solution.java:96)
 	at Solution.main(Solution.java:65)
 ----------------------------------------
 
