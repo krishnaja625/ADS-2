@@ -91,13 +91,14 @@ public class Solution {
 				// your code goes here
 		String[] strs = toReadFile(file);
 		for (int i = 0; i < strs.length; i++) {
-			String str = strs[i].toLowerCase();
+			strs[i].toLowerCase();
 			// System.out.println(strs[i]);
-            int count = st.get(str);
-            if (!(st.contains(str))) {
-                st.put(str, 1);
+			
+            int count = st.get(strs[i]);
+            if (st.contains(strs[i])) {
+                st.put(strs[i], count + 1);
             } else {
-                st.put(str, count + 1);
+                st.put(strs[i], 1);
             }
         }
 		return st;
