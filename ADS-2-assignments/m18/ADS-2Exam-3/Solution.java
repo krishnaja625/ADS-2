@@ -151,7 +151,7 @@ class T9 {
         {
             for (int j = i + 1; j < z; j++) 
             {
-                if (bst.get(str1[i]) > bst.get(str1[j]))  
+                if (bst.get(str1[i]) < bst.get(str1[j]))  
                 {
                     temp = str1[i];
                     str1[i] = str1[j];
