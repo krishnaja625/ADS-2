@@ -163,7 +163,18 @@ class T9 {
         for (int l =top - 1; l >= 0; l--) {
         	str2[l] = str1[l];
         }
-        Arrays.sort(str2);
+        for (int i = 0; i < z; i++) 
+        {
+            for (int j = i + 1; j < z; j++) 
+            {
+                if (str2[i].compareTo(str2[j]) < 0)  
+                {
+                    temp = str2[i];
+                    str2[i] = str2[j];
+                    str2[j] = temp;
+                }
+            }
+        }
         for (int l =top - 1; l >= 0; l--) {        	
         	als.add(str2[l]);
         }

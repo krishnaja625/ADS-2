@@ -170,10 +170,8 @@ words
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at java.base/java.util.ComparableTimSort.binarySort(Unknown Source)
-	at java.base/java.util.ComparableTimSort.sort(Unknown Source)
-	at java.base/java.util.Arrays.sort(Unknown Source)
-	at T9.getSuggestions(Solution.java:166)
+	at java.base/java.lang.String.compareTo(Unknown Source)
+	at T9.getSuggestions(Solution.java:170)
 	at Solution.main(Solution.java:59)
 ----------------------------------------
 
@@ -228,7 +226,7 @@ keep
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at T9.getSuggestions(Solution.java:148)
-	at T9.t9(Solution.java:194)
+	at T9.t9(Solution.java:205)
 	at Solution.main(Solution.java:72)
 ----------------------------------------
 
