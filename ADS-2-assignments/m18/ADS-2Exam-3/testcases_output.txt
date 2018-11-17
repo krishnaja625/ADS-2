@@ -169,6 +169,7 @@ right
 words
 
 Your Output: 
+rights
 right
 is
 hello
