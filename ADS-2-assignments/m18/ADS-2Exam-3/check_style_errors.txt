@@ -397,14 +397,14 @@ Starting audit...
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:112:19: Parameter st should be final. [FinalParameters]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:122:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:122:45: Parameter prefix should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:127:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:127:48: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:133:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:133:48: Parameter words should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:133:72: Parameter k should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:140:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:140:36: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:140:56: Parameter k should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:130:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:130:48: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:136:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:136:48: Parameter words should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:136:72: Parameter k should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:143:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:143:36: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m18\ADS-2Exam-3\Solution.java:143:56: Parameter k should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 30 errors.
 Starting audit...

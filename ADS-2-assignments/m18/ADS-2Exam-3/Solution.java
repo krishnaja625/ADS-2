@@ -120,6 +120,9 @@ class T9 {
 
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
+		for (String str : tst.keysWithPrefix(prefix)) {
+            System.out.println(str);
+        }
 		// your code goes here
 		return null;
 	}
