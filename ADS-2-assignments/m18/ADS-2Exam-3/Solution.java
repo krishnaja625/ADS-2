@@ -162,8 +162,6 @@ class T9 {
         }
         for (int l =top - 1; l >= 0; l--) {
         	str2[l] = str1[l];
-        	
-        	als.add(str2[l]);
         }
         Arrays.sort(str2);
         for (int l =top - 1; l >= 0; l--) {        	
