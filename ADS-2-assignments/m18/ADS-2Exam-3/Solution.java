@@ -151,7 +151,7 @@ class T9 {
         {
             for (int j = i + 1; j < z; j++) 
             {
-                if (str1[i].compareTo(str1[j]) < 0)  
+                if (str1[i].compareTo(str1[j]) > 0)  
                 {
                     temp = str1[i];
                     str1[i] = str1[j];
