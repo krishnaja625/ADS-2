@@ -93,7 +93,7 @@ public class Solution {
 		for (int i = 0; i < strs.length; i++) {
 			strs[i].toLowerCase();
 			// System.out.println(strs[i]);
-			st.put(strs[i], 0);
+			/*st.put(strs[i], 0);*/
 		}
 		for (int i = 0; i < strs.length; i++) {
             int count = st.get(strs[i]);
