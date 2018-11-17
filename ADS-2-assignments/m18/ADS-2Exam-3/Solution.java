@@ -101,7 +101,10 @@ public class Solution {
                 st.put(strs[i], 1);
             }
         }
-        System.out.println(st);
+        		for (int i = 0; i < strs.length; i++) {
+
+        System.out.println(st.get(strs[i]));
+    }
 		return st;
 	}
 
