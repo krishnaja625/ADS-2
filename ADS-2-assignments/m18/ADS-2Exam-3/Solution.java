@@ -92,7 +92,7 @@ public class Solution {
 		String[] strs = toReadFile(file);
 		for (int i = 0; i < strs.length; i++) {
 			strs[i].toLowerCase();
-			System.out.println(strs[i]);
+			// System.out.println(strs[i]);
 			st.put(strs[i], 1);
 		}
 		for (int i = 0; i < strs.length; i++) {
