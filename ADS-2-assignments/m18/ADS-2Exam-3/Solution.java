@@ -89,7 +89,8 @@ public class Solution {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
 		// your code goes here
 				// your code goes here
-		String[] strs = file.split(" ");
+		String[] strs = toReadFile(file);
+		
 
 		for (int i = 0; i < strs.length; i++) {
 			strs[i].toLowerCase();
