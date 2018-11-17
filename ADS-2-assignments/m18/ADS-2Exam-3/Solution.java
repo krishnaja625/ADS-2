@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class Solution {
@@ -140,34 +139,27 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int top = k;
-		String[] str1 = new String[6];
-		int[] freq = new int[6];
+		String[] str1 = new String[10];
+		String[] str2 = new String[10];
 		int z = 0;
 		String temp;
 		ArrayList<String> als = new ArrayList<String>();
 		for (String str : words) {
-			int cnt = 0;
-			str1[z] = str;
-			for (String key : getAllWords(str)) {
-				cnt++;
-			}
-			freq[z] = cnt;
-			z++;
+			str1[z++] = str;
 		}
-		Arrays.sort(str1);
-		/*for (int i = 0; i < z; i++) 
+		for (int i = 0; i < z; i++) 
         {
             for (int j = i + 1; j < z; j++) 
             {
-                if (str1[i].compareTo(str1[j]) > 0)  
+                if (bst.get(str1[i]) > bst.get(str1[j]))  
                 {
                     temp = str1[i];
                     str1[i] = str1[j];
                     str1[j] = temp;
                 }
             }
-        }*/
-        for (int l = 3; l >= 0; l--) {
+        }
+        for (int l =top - 1; l >= 0; l--) {
         	als.add(str1[l]);
         }
 		/*int max = 0;
