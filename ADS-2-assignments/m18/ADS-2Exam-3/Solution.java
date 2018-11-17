@@ -101,6 +101,7 @@ public class Solution {
                 st.put(strs[i], 1);
             }
         }
+        System.out.println(st);
 		return st;
 	}
 
