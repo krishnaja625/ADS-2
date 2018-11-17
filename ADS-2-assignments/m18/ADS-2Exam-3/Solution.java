@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class Solution {
@@ -120,8 +121,11 @@ class T9 {
 
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
+        ArrayList<String> al = new ArrayList<String>();
 		for (String str : tst.keysWithPrefix(prefix)) {
-            System.out.println(str);
+            if (!al.contains(str) && tst.hasPrefix(str)) {
+            	al.add(str);
+            }
         }
 		// your code goes here
 		return null;
