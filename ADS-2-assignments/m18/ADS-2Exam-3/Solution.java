@@ -167,7 +167,7 @@ class T9 {
                 }
             }
         }*/
-        for (int l =top - 1; l >= 0; l--) {
+        for (int l = 2; l >= 0; l--) {
         	als.add(str1[l]);
         }
 		/*int max = 0;
