@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class Solution {
@@ -160,8 +161,14 @@ class T9 {
             }
         }
         for (int l =top - 1; l >= 0; l--) {
-        	als.add(str1[l]);
+        	str2[l] = str1[l];
         }
+        Arrays.sort(str2);
+        for (int l =top - 1; l >= 0; l--) {        	
+        	als.add(str2[l]);
+        }
+
+
 		/*int max = 0;
 		for (int j = 0; j < i; j++) {
 			for (int k = 0; k < j; k++)
