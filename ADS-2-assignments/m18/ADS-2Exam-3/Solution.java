@@ -93,7 +93,9 @@ public class Solution {
 		for (int i = 0; i < strs.length; i++) {
 			strs[i].toLowerCase();
 			// System.out.println(strs[i]);
-			
+			st.put(strs[i], 1);
+		}
+		for (int i = 0; i < strs.length; i++) {
             int count = st.get(strs[i]);
             if (st.contains(strs[i])) {
                 st.put(strs[i], count + 1);
