@@ -117,14 +117,14 @@ class Graph {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        String NEWLINE = System.getProperty("line.separator");
-        s.append(vertices + " vertices, " + edges + " edges " + NEWLINE);
+        String nEWLINE = System.getProperty("line.separator");
+        s.append(vertices + " vertices, " + edges + " edges " + nEWLINE);
         for (int v = 0; v < vertices; v++) {
             s.append(v + ": ");
             for (int w : adj[v]) {
                 s.append(w + " ");
             }
-            s.append(NEWLINE);
+            s.append(nEWLINE);
         }
         return s.toString();
     }
