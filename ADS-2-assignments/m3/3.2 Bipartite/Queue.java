@@ -1,69 +1,65 @@
-import java.util.Iterator;
-import java.util.NoSuchElementException;
 /**
- * List of .
+ * List of Queue.
  *
  * @param      <Item>  The item
  */
-public class Queue<Item> implements Iterable<Item> {
+public class Queue<Item> {
     /**
-     * integer variable.
+     * {number of elements on queue}.
      */
-    private int n;         // number of elements on queue
+    private int n;
     /**
-     * node variable.
+     * {beginning of queue}.
      */
-    private Node first;    // beginning of queue
+    private Node first;
     /**
-     * node variable.
+     * {end of queue}.
      */
-    private Node last;     // end of queue
+    private Node last;
+
     /**
      * Class for node.
      */
     private class Node {
         /**
-         * item variable of item type.
+         * {Item}.
          */
         private Item item;
         /**
-         * next variable of node type.
+         * {Node of type next}.
          */
         private Node next;
     }
 
     /**
-      * Create an empty queue.
-      */
-    public Queue() {
+     * Create an empty queue.
+     */
+    Queue() {
         first = null;
         last  = null;
     }
 
     /**
-      * Is the queue empty?
-      * Time Complexity : O(1).
-      * @return boolean.
-      */
+     * Is the queue empty?
+     * @return     {Boolean}
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
     /**
-      * Return the number of items in the queue.
-      * Time Complexity : O(1).
-      * @return size.
-      */
+     * Return the number of items in the queue.
+     * @return     {Integer}
+     */
     public int size() {
         return n;
     }
 
     /**
-      * Return the item least recently added to the queue.
-      * Throw an exception if the queue is empty.
-      * Time Complexity : O(1).
-      * @return item type.
-      */
+     * Return the item least recently added to the queue.
+     * Throw an exception if the queue is empty.
+     * @return     {Item}
+     */
     public Item peek() {
         if (isEmpty()) {
             throw new RuntimeException("Queue underflow");
@@ -71,11 +67,12 @@ public class Queue<Item> implements Iterable<Item> {
         return first.item;
     }
 
+
     /**
-      * Add the item to the queue.
-      * Time Complexity : O(1).
-      * @param item item.
-      */
+     * {Add the item to the queue}.
+     *
+     * @param      item  The item
+     */
     public void enqueue(final Item item) {
         Node x = new Node();
         x.item = item;
@@ -90,83 +87,22 @@ public class Queue<Item> implements Iterable<Item> {
     }
 
     /**
-      * Remove and return the item on the queue least recently added.
-      * Throw an exception if the queue is empty.
-      * Time Complexity : O(1).
-      * @return item.
-      */
+     * Remove and return the item on the queue least recently added.
+     * Throw an exception if the queue is empty.
+     * @return     {Item}
+     */
     public Item dequeue() {
         if (isEmpty()) {
-            throw new RuntimeException("Queue underflow");
+            throw new RuntimeException(
+                "Queue underflow");
         }
         Item item = first.item;
         first = first.next;
         n--;
+        // to avoid loitering
         if (isEmpty()) {
-            last = null;  // to avoid loitering
+            last = null;
         }
         return item;
     }
-
-    /**
-      * Return string representation.
-      * Time Complexity : O(N).
-      * @return string representation.
-      */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        for (Item item : this) {
-            s.append(item + " ");
-        }
-        return s.toString();
-    }
-
-
-    /**
-      * Return an iterator that iterates over the
-      *  items on the queue in FIFO order.
-      *  Time Complexity : O(N).
-      *  @return item array.
-      */
-    public Iterator<Item> iterator()  {
-        return new ListIterator();
-    }
-    /**
-     * Class for list iterator.
-     */
-    private class ListIterator implements Iterator<Item> {
-        /**
-         * node variable.
-         */
-        private Node current = first;
-        /**
-         * Determines if it has next.
-         *Time Complexity : O(1).
-         * @return     True if has next, False otherwise.
-         */
-        public boolean hasNext() {
-            return current != null;
-        }
-        /**
-         * remove method.
-         * Time Complexity : O(1).
-         */
-        public void remove() {
-            throw new UnsupportedOperationException();
-        }
-        /**
-         * next method.
-         *Time Complexity : O(N).
-         * @return     { item }
-         */
-        public Item next() {
-            if (!hasNext()) {
-             throw new NoSuchElementException();
-            }
-            Item item = current.item;
-            current = current.next;
-            return item;
-        }
-    }
 }
-

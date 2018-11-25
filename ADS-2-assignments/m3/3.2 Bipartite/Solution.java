@@ -1,27 +1,35 @@
+/**
+ * Scanner import.
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
-    protected Solution() {
-
+    private Solution() {
+        //Empty constructor.
     }
     /**
-     * main method.
+     * Main function.
+     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vertices = sc.nextInt();
-        Graph graph = new Graph(vertices);
-        int edges = sc.nextInt();
-        while (sc.hasNext()) {
-            graph.addEdge(sc.nextInt(), sc.nextInt());
+        int vertex = Integer.parseInt(sc.nextLine());
+        int edge = Integer.parseInt(sc.nextLine());
+        Graph grp = new Graph(vertex);
+        while (sc.hasNextLine()) {
+            String[] nodes = sc.nextLine().split(" ");
+            grp.addEdge(Integer.parseInt(nodes[0]),
+                Integer.parseInt(nodes[1]));
         }
-        Bipartite bp = new Bipartite(graph);
+        //System.out.println(grp);
+        //DirectedCycle dc = new DirectedCycle(grp);
+        Bipartite bp = new Bipartite(grp);
         if (bp.isBipartite()) {
             System.out.println("Graph is bipartite");
         } else {
@@ -29,3 +37,4 @@ class Solution {
         }
     }
 }
+

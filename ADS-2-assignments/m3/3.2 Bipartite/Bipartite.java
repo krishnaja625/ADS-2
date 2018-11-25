@@ -31,11 +31,11 @@ public class Bipartite {
      */
     public Bipartite(final Graph g) {
         isBipartite = true;
-        color  = new boolean[g.v()];
-        marked = new boolean[g.v()];
-        edgeTo = new int[g.v()];
+        color  = new boolean[g.vertex()];
+        marked = new boolean[g.vertex()];
+        edgeTo = new int[g.vertex()];
 
-        for (int v = 0; v < g.v(); v++) {
+        for (int v = 0; v < g.vertex(); v++) {
             if (!marked[v]) {
                 dfs(g, v);
             }
@@ -123,7 +123,7 @@ public class Bipartite {
     private boolean check(final Graph g) {
         // graph is bipartite
         if (isBipartite) {
-            for (int v = 0; v < g.v(); v++) {
+            for (int v = 0; v < g.vertex(); v++) {
                 for (int w : g.adj(v)) {
                     if (color[v] == color[w]) {
                         System.err.printf(
@@ -165,4 +165,5 @@ public class Bipartite {
         }
     }
 }
+
 
