@@ -1,3 +1,6 @@
+/**
+ * Scanner import.
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
@@ -7,32 +10,31 @@ final class Solution {
      * Constructs the object.
      */
     private Solution() {
-
+        //Empty constructor.
     }
     /**
-     * MAin method.
+     * Main function.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vertices = sc.nextInt();
-        int edges = sc.nextInt();
-        sc.nextLine();
-        DiGraph dg = new DiGraph(vertices);
-        while (sc.hasNext()) {
-            String num = sc.nextLine();
-            String[] numbers = num.split(" ");
-            dg.addEdge(Integer.parseInt(numbers[0]),
-                Integer.parseInt(numbers[1]));
+        int vertex = Integer.parseInt(sc.nextLine());
+        int edge = Integer.parseInt(sc.nextLine());
+        Digraph dgh = new Digraph(vertex);
+        while (sc.hasNextLine()) {
+            String[] nodes = sc.nextLine().split(" ");
+            dgh.addEdge(Integer.parseInt(nodes[0]),
+                Integer.parseInt(nodes[1]));
         }
-        DirectedCycle cc = new DirectedCycle(dg, 0);
-        if (cc.hasCycle()) {
-            System.out.println("Cycle exists.");
+        //System.out.println(dgh);
+        DirectedCycle dc = new DirectedCycle(dgh);
+        if (dc.hasCycle()) {
+            System.out.println("Cycle exists. ");
         } else {
-            System.out.println("Cycle doesn't exists.");
-
+            System.out.println("Cycle doesn't exists. ");
         }
     }
 }
+
 
