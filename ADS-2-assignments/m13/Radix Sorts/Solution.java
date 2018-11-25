@@ -1,38 +1,28 @@
-/**
- * Scanner import.
- */
 import java.util.Scanner;
-/**
- * Arrays import.
- */
 import java.util.Arrays;
 /**
  * Class for solution.
  */
-public final class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
-        //Empty constructor.
     }
     /**
-     * Main function.
-     *
+     * main method that drives the program.
      * @param      args  The arguments
+     * Time complexity for this method is O(W*N*log N).
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
+        Quick3string q = new Quick3string();
         int n = Integer.parseInt(sc.nextLine());
         String[] arr = new String[n];
-        Quick3string q3s = new Quick3string();
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextLine();
         }
-        q3s.sort(arr);
+        q.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
-
-
-
