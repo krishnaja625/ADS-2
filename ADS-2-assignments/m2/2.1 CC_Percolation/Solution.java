@@ -38,10 +38,10 @@ class Percolation {
     }
     /**
      * function to check whether the element has to be connected or not.
+     * Complexity is 1.
      *
      * @param      row   The value of row
      * @param      col   The value of column
-     * Time complexity : O(1)
      */
     void open(final int row, final int col) {
         grid[row][col] = 1;
@@ -70,10 +70,10 @@ class Percolation {
     }
     /**
      * to get the component at the particular row and column.
+     * Complexity is 1.
      *
      * @param      i     row index is given.
      * @param      j     column index is given
-     * Time complexity : O(1)
      *
      * @return     return type is int
      */
@@ -82,10 +82,11 @@ class Percolation {
     }
     /**
      * Determines if open.
+     * Complexity is 1.
      *
      * @param      row   The row
      * @param      col   The col
-     * Time complexity : O(1)
+     *
      * @return     True if open, False otherwise.
      */
     boolean isOpen(final int row, final int col) {
@@ -93,10 +94,11 @@ class Percolation {
     }
     /**
      * Determines if full.
+     * Complexity is 1.
      *
      * @param      row   The row
      * @param      col   The col
-     * Time complexity : O(1)
+     *
      * @return     True if full, False otherwise.
      */
     boolean isFull(final int row, final int col) {
@@ -104,7 +106,8 @@ class Percolation {
     }
     /**
      * to get the number of open sites.
-     * Time complexity : O(1)
+     * Complexity is 1.
+     *
      * @return     integer is returned.
      */
     int numberofopensites() {
@@ -112,7 +115,8 @@ class Percolation {
     }
     /**
      * function to check if the grid percolates or not.
-     * Time complexity : O(1)
+     * Complexity is N.
+     *
      * @return     True if percolates, False otherwise.
      */
     boolean percolates() {
@@ -132,7 +136,6 @@ class Solution {
     }
     /**
      * function of main.
-     * Time complexity : O(N)
      *
      * @param      args  The arguments
      */
