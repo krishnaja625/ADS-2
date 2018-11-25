@@ -1,269 +1,186 @@
-/**
- * Scanner import.
- */
 import java.util.Scanner;
 /**
- * Interface for graph.
+ * Class for graph.
  */
-interface Graph {
+class Graph {
     /**
-     * Returns the count of vertex.
-     *
-     * @return     { description_of_the_return_value }
+     * integer variable vertices.
      */
-    int vertex();
+    private  int vertices;
     /**
-     * Returns the count of edge.
-     *
-     * @return     { description_of_the_return_value }
+     * integer variable edges.
      */
-    int edge();
+    private int edges;
     /**
-     *
-     * Adds an edge.
-     *
-     * @param      v     { parameter_description }
-     * @param      w     { parameter_description }
+     * array of bag type.
      */
-    void addEdge(int v, int w);
-    /**
-     * Returns the particular value in the list.
-     *
-     * @param      v     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    Iterable<Integer> list(int v);
-    /**
-     * Determines if it has edge.
-     *
-     * @param      v     { parameter_description }
-     * @param      w     { parameter_description }
-     *
-     * @return     True if has edge, False otherwise.
-     */
-    boolean hasEdge(int v, int w);
-}
-/**
- * Class for graph theory.
- */
-class GraphTheory implements Graph {
-    /**
-     * Vertices.
-     */
-    private int v;
-    /**
-     * Edges.
-     */
-    private int e;
-    /**
-     * Graph array.
-     */
-    private Bag<Integer>[] list;
+    private Bag<Integer>[] adj;
     /**
      * Constructs the object.
      */
-    GraphTheory() {
-        //Empty constructor.
+    Graph() {
+
     }
     /**
      * Constructs the object.
-     *
-     * @param      v1    The v 1
+     * Time complexity : O(n).
+     * @param      v     integer variable.
      */
-    GraphTheory(final int v1) {
-        this.v = v1;
-        this.e = 0;
-        list = (Bag<Integer>[]) new Bag[v1];
+    Graph(final int v) {
+        this.vertices = v;
+        this.edges = 0;
+        adj = (Bag<Integer>[]) new Bag[v];
         for (int i = 0; i < v; i++) {
-            list[i] = new Bag<Integer>();
+            adj[i] = new Bag<Integer>();
         }
     }
     /**
-     * Vertices count.
-     *
-     * @return     { description_of_the_return_value }
+     * returns vertices.
+     * Time complexity O(1).
+     * @return  vertices.
      */
-    public int vertex() {
-        return v;
+    public int getVertices() {
+        return vertices;
     }
     /**
-     * Edges count.
-     *
-     * @return     { description_of_the_return_value }
+     * returns edges.
+     * Time complexity : O(1).
+     * @return edges.
      */
-    public int edge() {
-        return e;
+    public int getEdges() {
+        return edges;
     }
     /**
      * Adds an edge.
-     * Complexity of add is 1.
-     *
-     * @param      v1     { parameter_description }
-     * @param      w     { parameter_description }
+     * Time complexity O(n)
+     * @param      v     integer variable.
+     * @param      w     integer variable.
      */
-    public void addEdge(final int v1, final int w) {
-        if (v1 == w) {
+    public void addEdge(final int v, final int w) {
+        if (v == w) {
             return;
         }
-
-        if (!hasEdge(v1, w)) {
-            e++;
-            list[v1].add(w);
-            list[w].add(v1);
+        if (!hasEdge(v, w)) {
+            edges++;
         }
-    }
-    /**
-     * Particular value in the list.
-     * Complexity is 1.
-     *
-     * @param      v1     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Iterable<Integer> list(final int v1) {
-        return list[v1];
+        adj[v].add(w);
+        adj[w].add(v);
+
     }
     /**
      * Determines if it has edge.
-     * Checks if there is a connection between two nodes.
-     * Complexity is N.
-     * Checks throughout the list for the particular index.
-     * For matrix it is 1.
-     * For adjecency list it is E.
      *
-     * @param      v1     { parameter_description }
-     * @param      w     { parameter_description }
-     *
+     * @param      v     integer variable.
+     * @param      w     integer variable.
+     * Time complexity O(n)
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(final int v1, final int w) {
-        for (int k : list[v1]) {
-            if (k == w) {
+    public boolean hasEdge(final int v, final int w) {
+        if (adj[v] == null) {
+            return true;
+        }
+        for (int i : adj[v]) {
+            if (i == w) {
                 return true;
             }
         }
         return false;
     }
     /**
-     * Displaying the given list in list format.
-     * Complexity is N^2.
+     * iterable function.
      *
-     * @param      v1          { Vertices }
-     * @param      e1          { Edges }
-     * @param      tokens     The tokens
-     *
-     * @throws     Exception  { No edges Exception }
+     * @param      v integer variable.
+     * Time complexity : O(1)
+     * @return   array.
      */
-    public void listdisplay(final int v1, final int e1,
-        final String[] tokens) throws Exception {
-        if (e1 <= 1 && v1 <= 1) {
-            System.out.println(vertex() + " vertices"
-                + ", " + edge() + " edges");
-            throw new Exception("No edges");
-        } else {
-            System.out.println(vertex() + " vertices"
-                + ", " + edge() + " edges");
-            for (int i = 0; i < tokens.length; i++) {
-            String str = "";
-            str = tokens[i] + ": ";
-            for (int k : list(i)) {
-                str = str + tokens[k] + " ";
-            }
-            System.out.println(str);
-            }
-        }
+    public Iterable<Integer> adj(final int v) {
+        return adj[v];
     }
     /**
-     * Display the given list in matix format.
-     * Complexity is N^2.
-     * The array used is a double dimensional array.
-     *
-     * @param      v1          { Vertices }
-     * @param      e1          { Edges }
-     *
-     * @throws     Exception  { No edges }
+     * matrix method.
+     * Time complexity : O(1)
+     * @return   array.
      */
-    public void matrixdisplay(final int v1,
-        final int e1) throws Exception {
-        if (e <= 1 && v <= 1) {
-            System.out.println(vertex() + " vertices"
-                + ", " + edge() + " edges");
-            throw new Exception("No edges");
-        } else {
-            System.out.println(vertex() + " vertices"
-                + ", " + edge() + " edges");
-            int[][] disp = new int[v][v];
-            for (int i = 0; i  < v1; i++) {
-                for (int j = 0; j < v1; j++) {
-                    if (hasEdge(i, j)) {
-                        disp[i][j] = 1;
-                    }
-                }
-            }
-
-            for (int i = 0; i < v1; i++) {
-                for (int j = 0; j < v1; j++) {
-                    System.out.print(disp[i][j] + " ");
-                }
-                System.out.println();
-            }
-        }
+    public Bag[] matrix() {
+        return adj;
+    }
+    /**
+     * list method.
+     * Time complexity : O(1)
+     * @return  array.
+     */
+    public Bag[] list() {
+        return adj;
     }
 }
 /**
  * Class for solution.
  */
-final class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {
-        //Empty constructor.
+    protected Solution() {
+
     }
     /**
-     * Main function.
-     *
+     * main method.
+     * Time complexity : O(N^2)
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        GraphTheory grph = null;
-        String type = sc.nextLine();
-        int vertex = Integer.parseInt(sc.nextLine());
+        String format = sc.nextLine();
+        int vertices = Integer.parseInt(sc.nextLine());
         int edges = Integer.parseInt(sc.nextLine());
-        String[] keys = sc.nextLine().split(",");
-        grph = new GraphTheory(vertex);
-        while (sc.hasNextLine()) {
-            String[] connect = sc.nextLine().split(" ");
-            grph.addEdge(Integer.parseInt(connect[0]),
-                Integer.parseInt(connect[1]));
+        Graph g = new Graph(vertices);
+        String[] cities = sc.nextLine().split(",");
+        if (cities.length > 2) {
+            for (int i = 0; i < edges; i++) {
+                String[] tokens = sc.nextLine().split(" ");
+                g.addEdge(Integer.parseInt(tokens[0]),
+                          Integer.parseInt(tokens[1]));
+            }
         }
-
-        switch (type) {
-            case "List":
-            try {
-                grph.listdisplay(vertex, edges, keys);
-            } catch (Exception p) {
-                System.out.println(p.getMessage());
+        System.out.println(g.getVertices() + " vertices, "
+         + g.getEdges() + " edges");
+        if (cities.length < 2) {
+            System.out.println("No edges");
+            return;
+        }
+        switch (format) {
+        case "Matrix":
+            Bag<Integer>[] adj = g.matrix();
+            int[][] matrix = new int[vertices][vertices];
+            for (int i = 0; i < vertices; i++) {
+                for (int j = 0; j < vertices; j++) {
+                    if (g.hasEdge(i, j)) {
+                        matrix[i][j] = 1;
+                    }
+                }
+            }
+            for (int i = 0; i < vertices; i++) {
+                for (int j = 0; j < vertices; j++) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+                System.out.println();
             }
             break;
-            case "Matrix":
-            try {
-                grph.matrixdisplay(vertex, edges);
-            } catch (Exception p) {
-                System.out.println(p.getMessage());
+        case "List":
+            g.list();
+            adj = g.list();
+            for (int v = 0; v < vertices; v++) {
+                System.out.print((cities[v] + ": "));
+                for (int w : adj[v]) {
+                    System.out.print((cities[w] + " "));
+                }
+                System.out.print("\n");
             }
             break;
-            default:
+        default:
             break;
         }
     }
 }
-
-
-
-
-
 
 
