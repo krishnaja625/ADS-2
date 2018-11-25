@@ -3,9 +3,8 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m2\2.1 CC_Percolation\Graph.java:117: Expected @return tag. [JavadocMethod]
-[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m2\2.1 CC_Percolation\Graph.java:119:16: Name 'NEWLINE' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] C:\Users\Zone\Desktop\ADS-2\ADS-2-assignments\m2\2.1 CC_Percolation\Graph.java:120:16: Name 'NEWLINE' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.

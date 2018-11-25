@@ -110,9 +110,10 @@ class Graph {
     public Bag[] list() {
         return adj;
     }
-
     /**
-     * Return a string representation of the graph.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
